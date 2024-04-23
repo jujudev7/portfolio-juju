@@ -14,12 +14,12 @@ export const Certifs = () => {
       { id: 7, name: "Gérez du code avec Git et GitHub" },
     ];
   return (
-    <Section className="flex">
-      <div className="mx-auto">
-        <h3 className="pb-4">Mes Certifications OpenClassrooms</h3>
-        <ul className="space-y-2 pl-6">
+    <Section className="flex mt-10">
+      <div className="mx-auto my-8">
+        <h2 className="pb-4">Mes Certifications OpenClassrooms</h2>
+        <ul className="space-y-2 pl-6 certif-ul">
           {certifications.map((certification) => (
-            <li key={certification.id} className="flex items-center pb-2 certif">
+            <li key={certification.id} className="flex items-center pb-2 certif-li">
               <span className="mr-2 pr-2">{certification.name}</span>
               <CheckCircledIcon className="h-5 w-5 text-green-500" />
             </li>

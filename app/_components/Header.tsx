@@ -5,22 +5,21 @@ import { LinkedinIcon } from "./icons/LinkedinIcon";
 
 export const Header = () => {
   return (
-    <header className="sticky top-0">
-      <Section className="flex justify-between items-center">
+    <Section className="flex justify-between items-center sticky top-0 bg-white z-10 pb-2">
         <Link href="">
           <img src="j.svg" alt="logo jujudev7.com" className="w-10 mt-2" />
         </Link>
         <ul className="menu space-x-10">
-          <Link className="pb-1 border-b-2 border-violet-600" href="#about">
+          <Link className="menu-link" href="#about">
             About
           </Link>
-          <Link className="pb-1 border-b-2 border-violet-600" href="#projects">
+          <Link className="menu-link" href="#projects">
             Projects
           </Link>
-          <Link className="pb-1 border-b-2 border-violet-600" href="#certifications">
+          <Link className="menu-link" href="#certifications">
             Certifs
           </Link>
-          <Link className="pb-1 border-b-2 border-violet-600" href="#projects">
+          <Link className="menu-link" href="#projects">
             Contact
           </Link>
         </ul>
@@ -35,7 +34,6 @@ export const Header = () => {
             <LinkedinIcon size={32} />
           </Link>
         </ul>
-      </Section>
-    </header>
+    </Section>
   );
 };

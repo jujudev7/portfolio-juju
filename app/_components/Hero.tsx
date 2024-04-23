@@ -7,7 +7,9 @@ export const Hero = () => {
         <h1>
           <span className="name">Julien Penna</span>
           <br />
-          <span className="job">Front-end Developer React JS</span>
+          <i>
+            <span className="job">Front-end Developer React JS</span>
+          </i>
         </h1>
       </div>
       <div className="flex my-10">
@@ -26,11 +28,22 @@ export const Hero = () => {
           </p>
         </div>
         <div className="flex-1 ml-4">
-          <img
-            src="jujudev7.jpg"
-            className="w-full h-auto rounded-xl"
-            alt="portrait Julien Penna"
-          />
+          <div
+            className="flip-container"
+          >
+            <div className="flipper">
+              <div className="front">
+                <img
+                  src="jujudev7.jpg"
+                  className="w-full h-auto rounded-xl"
+                  alt="portrait Julien Penna"
+                />
+              </div>
+              <div className="back">
+                <img src="yo.png" alt="Image 2" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </Section>

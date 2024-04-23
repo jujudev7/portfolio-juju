@@ -142,3 +142,7 @@ header {
 .certif-li:hover {
   background: honeydew;
 }
+
+.see-more:hover {
+  background: #161614 !important;
+}

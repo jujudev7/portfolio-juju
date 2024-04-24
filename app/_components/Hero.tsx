@@ -3,7 +3,7 @@ import { Section } from "./Section";
 export const Hero = () => {
   return (
     <Section className="heading my-10">
-      <div className="flex-1">
+      <div id="about" className="flex-1">
         <h1>
           <span className="name">Julien Penna</span>
           <br />

@@ -9,13 +9,15 @@ import {
 import { Section } from "./Section";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+import { ArrowTopRightIcon, LightningBoltIcon } from "@radix-ui/react-icons";
 
 export const Projects = () => {
   return (
-    <Section className="flex">
+    <Section className="flex mb-20">
       <div>
-        <h2 className="mb-10 text-center">Projects</h2>
+        <h2 id="projects" className="mb-10 text-center justify-center flex items-center">
+          <span>Projects</span>
+          <LightningBoltIcon className="ml-4 mt-1 w-8 h-8" /></h2>
         <div className="grid gap-6 grid-cols-2">
           <Card>
             <CardHeader>

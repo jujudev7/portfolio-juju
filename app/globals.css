@@ -183,3 +183,12 @@ header {
 .flip-container:hover .flipper {
   transform: rotateY(180deg);
 }
+
+.submit {
+  margin-bottom: 60px !important;
+}
+
+.text-destructive {
+  color: yellow;
+  font-size: 1rem;
+}

@@ -15,11 +15,11 @@ export const Projects = () => {
   return (
     <Section className="flex">
       <div>
-        <h2 className="mb-10">Projects</h2>
+        <h2 className="mb-10 text-center">Projects</h2>
         <div className="grid gap-6 grid-cols-2">
           <Card>
             <CardHeader>
-              <CardTitle className="mb-4">Ohmyfood 🍴</CardTitle>
+              <CardTitle className="mb-4">LesPetitsPlats 👨‍🍳</CardTitle>
               <div className="overflow-hidden rounded-md">
                 <img
                   alt="React Rendezvous"
@@ -41,7 +41,7 @@ export const Projects = () => {
               </p>
             </CardContent>
             <CardFooter>
-              <Button className="ml-auto group see-more">
+              <Button className="ml-auto group hover:bg-gray-900">
                 Voir le site{" "}
                 <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />
               </Button>
@@ -49,7 +49,7 @@ export const Projects = () => {
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle className="mb-4">Ohmyfood 🍴</CardTitle>
+              <CardTitle className="mb-4">Fisheye 📸</CardTitle>
               <div className="overflow-hidden rounded-md">
                 <img
                   alt="React Rendezvous"
@@ -71,38 +71,7 @@ export const Projects = () => {
               </p>
             </CardContent>
             <CardFooter>
-              <Button className="ml-auto group see-more">
-                Voir le site{" "}
-                <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />
-              </Button>
-            </CardFooter>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="mb-4">Ohmyfood 🍴</CardTitle>
-              <div className="overflow-hidden rounded-md">
-                <img
-                  alt="React Rendezvous"
-                  loading="lazy"
-                  width="250"
-                  height="330"
-                  decoding="async"
-                  data-nimg="1"
-                  className="h-auto w-auto object-cover transition-all hover:scale-110"
-                  src="jujudev7.jpg"
-                ></img>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p>Ohmyfood! est une entreprise de commande de repas en ligne.</p>
-              <p>
-                <strong>Mission :</strong> Intégration des maquettes, animations
-                CSS + loader.
-              </p>
-            </CardContent>
-            <CardFooter>
-              <Button className="ml-auto group see-more">
+              <Button className="ml-auto group hover:bg-gray-900">
                 Voir le site{" "}
                 <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />
               </Button>
@@ -111,7 +80,39 @@ export const Projects = () => {
 
           <Card>
             <CardHeader>
-              <CardTitle className="mb-4">Ohmyfood 🍴</CardTitle>
+              <CardTitle className="mb-4">GameOn 🕹️</CardTitle>
+              <div className="overflow-hidden relative rounded-md border-2 border-primary">
+                <img
+                  alt="React Rendezvous"
+                  loading="lazy"
+                  width="250"
+                  height="330"
+                  decoding="async"
+                  data-nimg="1"
+                  className="h-auto w-auto object-cover transition-all hover:scale-110"
+                  src="omf.png"
+                ></img>
+                <div className="absolute inset-0 bg-primary opacity-50 transition-opacity duration-300 hover:opacity-0"></div>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p>Ohmyfood! est une entreprise de commande de repas en ligne.</p>
+              <p>
+                <strong>Mission :</strong> Intégration des maquettes, animations
+                CSS + loader.
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Button className="ml-auto group hover:bg-gray-900">
+                Voir le site{" "}
+                <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />
+              </Button>
+            </CardFooter>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="mb-4">Ohmyfood 🍽️</CardTitle>
               <div className="overflow-hidden rounded-md">
                 <img
                   alt="React Rendezvous"
@@ -121,7 +122,7 @@ export const Projects = () => {
                   decoding="async"
                   data-nimg="1"
                   className="h-auto w-auto object-cover transition-all hover:scale-110"
-                  src="jujudev7.jpg"
+                  src="ohmyfood-demo.gif"
                 ></img>
               </div>
             </CardHeader>
@@ -133,7 +134,7 @@ export const Projects = () => {
               </p>
             </CardContent>
             <CardFooter>
-              <Button className="ml-auto group see-more">
+              <Button className="ml-auto group hover:bg-gray-900">
                 Voir le site{" "}
                 <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />
               </Button>

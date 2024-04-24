@@ -84,7 +84,6 @@ h2 {
   font-weight: bold;
   color: #7c3aed;
   word-spacing: 7px;
-  text-align: center;
 }
 
 h3 {
@@ -150,23 +149,6 @@ header {
   margin: 40px 40px 40px 0;
 }
 
-.certif-ul {
-  margin-top: 20px;
-  padding-left: 140px;
-}
-
-.certif-li {
-  font-size: 1.2rem;
-}
-
-.certif-li:hover {
-  background: honeydew;
-}
-
-.see-more:hover {
-  background: #161614 !important;
-}
-
 /* Conteneur principal pour l'effet flip */
 .flip-container {
   perspective: 1000px;
@@ -181,8 +163,6 @@ header {
 /* Face avant de l'élément */
 .front,
 .back {
-  width: 400px;
-  height: 400px;
   position: absolute;
   backface-visibility: hidden;
 }

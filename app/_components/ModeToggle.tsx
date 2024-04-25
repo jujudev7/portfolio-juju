@@ -23,7 +23,7 @@ export function ModeToggle() {
   };
 
   return (
-    <Button onClick={toggleTheme}>
+    <Button onClick={toggleTheme} className="mr-2">
       {isDarkMode ? (
         <MoonIcon className="h-[1.2rem] w-[1.2rem] rotate-90 scale-100 transition-all" />
       ) : (

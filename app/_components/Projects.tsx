@@ -43,7 +43,7 @@ export const Projects = () => {
               </p>
             </CardContent>
             <CardFooter>
-              <Button className="ml-auto group hover:bg-gray-900">
+              <Button className="ml-auto group hover:bg-gray-900 see-more">
                 Voir le site{" "}
                 <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />
               </Button>
@@ -52,7 +52,7 @@ export const Projects = () => {
           <Card>
             <CardHeader>
               <CardTitle className="mb-4">Fisheye 📸</CardTitle>
-              <div className="overflow-hidden rounded-md">
+              <div className="overflow-hidden rounded-md border-2 border-primary">
                 <img
                   alt="React Rendezvous"
                   loading="lazy"
@@ -73,7 +73,7 @@ export const Projects = () => {
               </p>
             </CardContent>
             <CardFooter>
-              <Button className="ml-auto group hover:bg-gray-900">
+              <Button className="ml-auto group hover:bg-gray-900 see-more">
                 Voir le site{" "}
                 <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />
               </Button>
@@ -92,7 +92,7 @@ export const Projects = () => {
                   decoding="async"
                   data-nimg="1"
                   className="h-auto w-auto object-cover transition-all hover:scale-110"
-                  src="omf.png"
+                  src="jujudev7.jpg"
                 ></img>
                 <div className="absolute inset-0 bg-primary opacity-50 transition-opacity duration-300 hover:opacity-0"></div>
               </div>
@@ -105,7 +105,7 @@ export const Projects = () => {
               </p>
             </CardContent>
             <CardFooter>
-              <Button className="ml-auto group hover:bg-gray-900">
+              <Button className="ml-auto group hover:bg-gray-900 see-more">
                 Voir le site{" "}
                 <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />
               </Button>
@@ -123,8 +123,8 @@ export const Projects = () => {
                   height="330"
                   decoding="async"
                   data-nimg="1"
-                  className="h-auto w-auto object-cover transition-all hover:scale-110"
-                  src="ohmyfood-demo.gif"
+                  className="w-auto object-cover transition-all hover:scale-110"
+                  src="jujudev7.jpg"
                 ></img>
               </div>
             </CardHeader>
@@ -136,7 +136,7 @@ export const Projects = () => {
               </p>
             </CardContent>
             <CardFooter>
-              <Button className="ml-auto group hover:bg-gray-900">
+              <Button className="ml-auto group hover:bg-gray-900 see-more">
                 Voir le site{" "}
                 <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />
               </Button>

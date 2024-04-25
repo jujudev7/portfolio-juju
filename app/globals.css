@@ -98,20 +98,13 @@ p {
   padding-bottom: 1rem;
 }
 
-header {
-  background: #fff;
-  padding-bottom: 10px;
-  z-index: 10;
-  /* box-shadow: #7c3aed 0px 1px 1px;; */
-}
-
-.github-icon:hover path {
+/* .github-icon:hover path {
   fill: #161614;
 }
 
 .linkedin-icon:hover path {
   fill: #0a66c2;
-}
+} */
 
 .menu {
   font-family: var(--poppins);
@@ -184,8 +177,13 @@ header {
   transform: rotateY(180deg);
 }
 
+.see-more:hover {
+  border: 1px solid white;
+}
+
 .submit {
-  margin-bottom: 60px !important;
+  margin-top: 25px !important;
+  margin-bottom: 50px !important;
 }
 
 .text-destructive {

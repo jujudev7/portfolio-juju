@@ -22,6 +22,9 @@ import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
+import { GithubIcon } from "./icons/GithubIcon";
+import { LinkedinIcon } from "./icons/LinkedinIcon";
+import Link from "next/link";
 
 export function InputDemo() {
   return <Input className="bg-white" type="email" placeholder="Email" />;
@@ -70,16 +73,18 @@ export const ContactEN = () => {
 
   return (
     <Section className="flex flex-col items-center justify-center mt-10">
-      <Card className="w-2/3 mb-10 bg-primary mb-40">
-        <h2 id="contact" className="m-8 justify-center text-white flex items-center">
+      <Card className="w-2/3 bg-primary mb-8">
+        <h2
+          id="contact"
+          className="mt-8 mb-4 justify-center text-white flex items-center"
+        >
           <span>Contact</span>{" "}
           <EnvelopeOpenIcon className="ml-4 mt-1 w-8 h-8" />
         </h2>
-
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="w-2/3 space-y-6 mx-auto"
+            className="w-2/3 space-y-4 mx-auto"
           >
             <div className="flex flex-col md:flex-row md:space-x-4 w-full">
               <FormField
@@ -183,6 +188,36 @@ export const ContactEN = () => {
           </form>
         </Form>
       </Card>
+      <div className="contacts flex items-center w-2/3 gap-4 mb-40">
+        <Link
+          href="mailto:penna.julien@gmail.com"
+          target="_blank"
+          className="flex-grow"
+        >
+          <Card className="bg-violet-600 hover:bg-gray-900 hover:border-white h-20 flex items-center justify-center">
+            <img src="mailto.png" alt="mail Julien Penna" className="pl-14 pr-14"/>
+          </Card>
+        </Link>
+
+        <Link
+          href="https://www.linkedin.com/in/dev-web-front-end-julien-penna/"
+          target="_blank"
+          className="flex-grow"
+        >
+          <Card className="bg-violet-600 hover:bg-blue-700 hover:border-white flex justify-center h-20 pl-7 pr-7">
+            <LinkedinIcon size={32} className="m-6" aria-label="Linkedin Julien Penna" />
+          </Card>
+        </Link>
+        <Link
+          href="https://github.com/jujudev7"
+          target="_blank"
+          className="flex-grow"
+        >
+          <Card className="bg-violet-600 hover:bg-gray-900 hover:border-white flex justify-center h-20 h-20 pl-7 pr-7">
+            <GithubIcon size={32} className="m-6" aria-label="GitHub Julien Penna" />
+          </Card>
+        </Link>
+      </div>
     </Section>
   );
 };

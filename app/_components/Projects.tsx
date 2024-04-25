@@ -22,7 +22,7 @@ export const Projects = () => {
           <Card>
             <CardHeader>
               <CardTitle className="mb-4">LesPetitsPlats 👨‍🍳</CardTitle>
-              <div className="overflow-hidden rounded-md">
+              <div className="overflow-hidden rounded-md border-2 border-primary">
                 <img
                   alt="React Rendezvous"
                   loading="lazy"
@@ -61,7 +61,7 @@ export const Projects = () => {
                   decoding="async"
                   data-nimg="1"
                   className="h-auto w-auto object-cover transition-all hover:scale-110"
-                  src="jujudev7.jpg"
+                  src="fisheye.gif"
                 ></img>
               </div>
             </CardHeader>
@@ -92,9 +92,8 @@ export const Projects = () => {
                   decoding="async"
                   data-nimg="1"
                   className="h-auto w-auto object-cover transition-all hover:scale-110"
-                  src="jujudev7.jpg"
+                  src="gameon.gif"
                 ></img>
-                <div className="absolute inset-0 bg-primary opacity-50 transition-opacity duration-300 hover:opacity-0"></div>
               </div>
             </CardHeader>
             <CardContent>
@@ -115,7 +114,7 @@ export const Projects = () => {
           <Card>
             <CardHeader>
               <CardTitle className="mb-4">Ohmyfood 🍽️</CardTitle>
-              <div className="overflow-hidden rounded-md">
+              <div className="overflow-hidden rounded-md border-2 border-primary">
                 <img
                   alt="React Rendezvous"
                   loading="lazy"

@@ -123,7 +123,7 @@ export const Projects = () => {
                   decoding="async"
                   data-nimg="1"
                   className="w-auto object-cover transition-all hover:scale-110"
-                  src="jujudev7.jpg"
+                  src="ohmyfood.gif"
                 ></img>
               </div>
             </CardHeader>

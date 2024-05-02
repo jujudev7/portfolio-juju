@@ -10,27 +10,50 @@ export function ModeToggle() {
     const header = document.querySelector(".header") as HTMLElement; // Assertion de type
     const textArea = document.querySelector("textarea") as HTMLElement; // Assertion de type
     const allInputs = document.querySelectorAll("input");
+    const submitBtn = document.querySelector(".submit") as HTMLElement; // Assertion de type
 
     if (isDarkMode) {
       document.body.classList.remove("dark");
       if (header) {
         header.style.backgroundColor = "#fff";
         textArea.style.backgroundColor = "#fff";
-        allInputs.forEach(input => {
+        allInputs.forEach((input) => {
           input.style.backgroundColor = "#fff";
+        });
+        submitBtn.style.backgroundColor = "#fff";
+        submitBtn.style.color = "#7C3AED";
+        submitBtn.addEventListener("mouseover", function () {
+          submitBtn.style.backgroundColor = "#030712";
+          submitBtn.style.color = "#fff";
+        });
+
+        submitBtn.addEventListener("mouseout", function () {
+          submitBtn.style.backgroundColor = "#fff";
+          submitBtn.style.color = "#7C3AED";
         });
       }
     } else {
       document.body.classList.add("dark");
       if (header) {
-        header.style.backgroundColor = "#030712"; 
+        header.style.backgroundColor = "#030712";
         textArea.style.backgroundColor = "#030712";
-        allInputs.forEach(input => {
+        allInputs.forEach((input) => {
           input.style.backgroundColor = "#030712";
+        });
+        submitBtn.style.backgroundColor = "#030712";
+        submitBtn.style.color = "#fff";
+        submitBtn.addEventListener("mouseover", function () {
+          submitBtn.style.backgroundColor = "#fff";
+          submitBtn.style.color = "#7C3AED";
+        });
+
+        submitBtn.addEventListener("mouseout", function () {
+          submitBtn.style.backgroundColor = "#030712";
+          submitBtn.style.color = "#fff";
         });
       }
     }
-};
+  };
 
   return (
     <Button onClick={toggleTheme} className="mr-2">

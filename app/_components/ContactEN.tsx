@@ -155,7 +155,7 @@ export const ContactEN = () => {
 
             <Button
               type="submit"
-              className="p-6 text-lg bg-white text-primary hover:bg-gray-900 hover:text-white group submit"
+              className="submit p-6 text-lg bg-white text-primary hover:bg-gray-900 hover:text-white group"
             >
               Submit
               <RocketIcon className="ml-3 h-4 w-4 mt-1 group-hover:translate-x-2 group-hover:-translate-y-2" />

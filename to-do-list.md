@@ -1,8 +1,8 @@
 # MODE
 ✅ placer icone  
-❌ gérer couleurs header  
-❌ gérer couleur hover certifs  
-❌ gérer couleur bg inputs form   
+✅ gérer couleurs header  
+✅ gérer couleur hover certifs  
+✅ gérer couleur bg inputs form   
 
 # LANGUES
 ❌ créer un switch FR/EN

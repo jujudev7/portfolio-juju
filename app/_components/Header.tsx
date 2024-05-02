@@ -1,6 +1,7 @@
 import { Section } from "./Section";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
+import { SwitchLanguage } from "./SwitchLanguage";
 
 export const Header = () => {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -42,6 +43,7 @@ export const Header = () => {
             Contact
           </Link>
         </ul>
+        <SwitchLanguage />
         <ModeToggle />
     </Section>
   );

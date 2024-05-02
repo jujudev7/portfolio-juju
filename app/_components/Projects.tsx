@@ -6,6 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+import Image from 'next/image';
 import { Section } from "./Section";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -23,16 +24,16 @@ export const Projects = () => {
             <CardHeader>
               <CardTitle className="mb-4">LesPetitsPlats 👨‍🍳</CardTitle>
               <div className="overflow-hidden rounded-md border-2 border-primary">
-                <img
+                <Image
                   alt="React Rendezvous"
                   loading="lazy"
-                  width="250"
-                  height="330"
+                  width="600"
+                  height="400"
                   decoding="async"
-                  data-nimg="1"
-                  className="h-auto w-auto object-cover transition-all hover:scale-110"
-                  src="jujudev7.jpg"
-                ></img>
+                  data-nImage="1"
+                  className="h-auto object-cover transition-all hover:scale-110"
+                  src="/jujudev7.jpg"
+                ></Image>
               </div>
             </CardHeader>
             <CardContent>
@@ -53,16 +54,16 @@ export const Projects = () => {
             <CardHeader>
               <CardTitle className="mb-4">Fisheye 📸</CardTitle>
               <div className="overflow-hidden rounded-md border-2 border-primary">
-                <img
+                <Image
                   alt="React Rendezvous"
                   loading="lazy"
-                  width="250"
-                  height="330"
+                  width="600"
+                  height="400"
                   decoding="async"
-                  data-nimg="1"
-                  className="h-auto w-auto object-cover transition-all hover:scale-110"
-                  src="fisheye.gif"
-                ></img>
+                  data-nImage="1"
+                  className="h-auto object-cover transition-all hover:scale-110"
+                  src="/fisheye.gif"
+                ></Image>
               </div>
             </CardHeader>
             <CardContent>
@@ -84,16 +85,16 @@ export const Projects = () => {
             <CardHeader>
               <CardTitle className="mb-4">GameOn 🕹️</CardTitle>
               <div className="overflow-hidden relative rounded-md border-2 border-primary">
-                <img
+                <Image
                   alt="React Rendezvous"
                   loading="lazy"
-                  width="250"
-                  height="330"
+                  width="600"
+                  height="400"
                   decoding="async"
-                  data-nimg="1"
-                  className="h-auto w-auto object-cover transition-all hover:scale-110"
-                  src="gameon.gif"
-                ></img>
+                  data-nImage="1"
+                  className="h-auto object-cover transition-all hover:scale-110"
+                  src="/gameon.gif"
+                ></Image>
               </div>
             </CardHeader>
             <CardContent>
@@ -115,16 +116,16 @@ export const Projects = () => {
             <CardHeader>
               <CardTitle className="mb-4">Ohmyfood 🍽️</CardTitle>
               <div className="overflow-hidden rounded-md border-2 border-primary">
-                <img
+                <Image
                   alt="React Rendezvous"
                   loading="lazy"
-                  width="250"
-                  height="330"
+                  width="600"
+                  height="400"
                   decoding="async"
-                  data-nimg="1"
-                  className="w-auto object-cover transition-all hover:scale-110"
-                  src="ohmyfood.gif"
-                ></img>
+                  data-nImage="1"
+                  className="h-auto object-cover transition-all hover:scale-110"
+                  src="/ohmyfood.gif"
+                ></Image>
               </div>
             </CardHeader>
             <CardContent>

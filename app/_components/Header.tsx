@@ -1,4 +1,5 @@
 import { Section } from "./Section";
+import Image from "next/image";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
 import { SwitchLanguage } from "./SwitchLanguage";
@@ -22,29 +23,29 @@ export const Header = () => {
 
   return (
     <Section className="header flex justify-between items-center sticky top-0 z-10 pb-2">
-        <Link href="" className="pl-2">
-          <img src="j.svg" alt="logo jujudev7.com" className="w-10 mt-2" />
+      <Link href="" className="pl-2">
+        <Image src="j.svg" alt="logo jujudev7.com" width={100} height={100} className="w-10 mt-2" />
+      </Link>
+      <ul className="menu space-x-10">
+        <Link className="menu-link" href="#about" onClick={handleScroll}>
+          About
         </Link>
-        <ul className="menu space-x-10">
-          <Link className="menu-link" href="#about" onClick={handleScroll}>
-            About
-          </Link>
-          <Link className="menu-link" href="#projects" onClick={handleScroll}>
-            Projects
-          </Link>
-          <Link
-            className="menu-link"
-            href="#certifications"
-            onClick={handleScroll}
-          >
-            Certifs
-          </Link>
-          <Link className="menu-link" href="#contact" onClick={handleScroll}>
-            Contact
-          </Link>
-        </ul>
-        <SwitchLanguage />
-        <ModeToggle />
+        <Link className="menu-link" href="#projects" onClick={handleScroll}>
+          Projects
+        </Link>
+        <Link
+          className="menu-link"
+          href="#certifications"
+          onClick={handleScroll}
+        >
+          Certifs
+        </Link>
+        <Link className="menu-link" href="#contact" onClick={handleScroll}>
+          Contact
+        </Link>
+      </ul>
+      <SwitchLanguage />
+      <ModeToggle />
     </Section>
   );
 };

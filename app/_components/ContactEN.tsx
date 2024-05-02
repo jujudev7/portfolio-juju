@@ -18,6 +18,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
+import Image from 'next/image';
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
@@ -169,10 +170,12 @@ export const ContactEN = () => {
           target="_blank"
           className="flex-grow"
         >
-          <Card className="bg-violet-600 hover:bg-gray-900 hover:border-white h-20 flex items-center justify-center">
-            <img
-              src="mailto.png"
+          <Card className="bg-violet-600 hover:bg-black hover:border-white h-20 flex items-center justify-center">
+            <Image
+              src="/mailto.png"
               alt="mail Julien Penna"
+              width={600} 
+              height={100}
               className="pl-14 pr-14"
             />
           </Card>
@@ -196,7 +199,7 @@ export const ContactEN = () => {
           target="_blank"
           className="flex-grow"
         >
-          <Card className="bg-violet-600 hover:bg-gray-900 hover:border-white flex justify-center h-20 h-20 pl-7 pr-7">
+          <Card className="bg-violet-600 hover:bg-black hover:border-white flex justify-center h-20 h-20 pl-7 pr-7">
             <GithubIcon
               size={32}
               className="m-6"

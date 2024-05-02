@@ -1,4 +1,5 @@
 import { Section } from "./Section";
+import Image from "next/image";
 
 export const Hero = () => {
   return (
@@ -14,7 +15,7 @@ export const Hero = () => {
       </div>
       <div className="flex my-10">
         <div className="flex-[2]">
-          <p>Salut 👋 moi c'est Julien,</p>
+          <p>Salut 👋 moi c&apos;est Julien,</p>
           <p>
             Je suis un développeur front-end français, spécialisé en{" "}
             <strong>React.js</strong>. Grâce à mes compétences, je peux intégrer
@@ -22,8 +23,8 @@ export const Hero = () => {
             <strong>applications interactives et réactives</strong>.
           </p>
           <p>
-            Doté d’une <strong>forte capacité d'adaptation</strong> et d'un
-            désir constant d'apprentissage, je suis prêt à relever de nouveaux
+            Doté d&apos;une <strong>forte capacité d&apos;adaptation</strong> et d&apos;un
+            désir constant d&apos;apprentissage, je suis prêt à relever de nouveaux
             défis !
           </p>
         </div>
@@ -33,14 +34,15 @@ export const Hero = () => {
           >
             <div className="flipper">
               <div className="front">
-                <img
-                  src="jujudev7.jpg"
+                <Image
+                  src="/jujudev7.jpg"
+                  width={600} height={400}
                   className="w-full h-auto rounded-xl"
                   alt="portrait Julien Penna"
                 />
               </div>
               <div className="back">
-                <img src="yo.png" alt="Image 2" />
+                <Image src="/yo.png" alt="Image 2" width={600} height={400} />
               </div>
             </div>
           </div>

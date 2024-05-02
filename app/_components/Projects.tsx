@@ -13,7 +13,7 @@ import { ArrowTopRightIcon, LightningBoltIcon } from "@radix-ui/react-icons";
 
 export const Projects = () => {
   return (
-    <Section className="flex mb-20">
+    <Section className="projects flex mb-20">
       <div>
         <h2 id="projects" className="mb-10 text-center justify-center flex items-center">
           <span>Projects</span>

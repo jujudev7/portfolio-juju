@@ -20,7 +20,7 @@ export const Header = () => {
   };
 
   return (
-    <Section className="flex justify-between items-center sticky top-0 bg-white z-10 pb-2">
+    <Section className="header flex justify-between items-center sticky top-0 z-10 pb-2">
         <Link href="" className="pl-2">
           <img src="j.svg" alt="logo jujudev7.com" className="w-10 mt-2" />
         </Link>

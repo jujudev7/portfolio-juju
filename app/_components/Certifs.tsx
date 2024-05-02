@@ -14,7 +14,7 @@ export const Certifs = () => {
   ];
 
   return (
-    <Section className="flex flex-col items-center justify-center mt-10 mb-20">
+    <Section className="certifs flex flex-col items-center justify-center mt-10 mb-20">
        {/* <h2 className="m-8 justify-center text-white flex items-center"> */}
       <h2 id="certifications" className="pb-4 flex items-center">
       <span>Mes Certifications OpenClassrooms</span> <BookmarkIcon className="ml-4 mt-1 w-8 h-8 group-hover:translate-x-2" /></h2>
@@ -22,7 +22,7 @@ export const Certifs = () => {
         {certifications.map((certification) => (
           <li
             key={certification.id}
-            className="flex items-center p-2 text-lg rounded-lg hover:bg-green-100"
+            className="flex items-center p-2 text-lg rounded-lg hover:bg-secondary"
           >
             <span className="mr-2 pr-2">{certification.name}</span>
             <CheckCircledIcon className="h-5 w-5 text-green-500" />

@@ -31,17 +31,14 @@ export function InputDemo() {
 }
 
 const FormSchema = z.object({
-  firstname: z.string().min(2, {
-    message: "* Firstname must be at least 2 characters.",
-  }),
-  lastname: z.string().min(2, {
+  name: z.string().min(2, {
     message: "* Lastname must be at least 2 characters.",
   }),
   subject: z.string().min(5, {
-    message: "* Lastname must be at least 5 characters.",
+    message: "* Subject must be at least 5 characters.",
   }),
   message: z.string().min(50, {
-    message: "* Lastname must be at least 50 characters.",
+    message: "* Message must be at least 50 characters.",
   }),
   email: z.string().email({
     message: "* Invalid email address",
@@ -52,8 +49,7 @@ export const ContactEN = () => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      firstname: "",
-      lastname: "",
+      name: "",
       subject: "",
       message: "",
       email: "",
@@ -89,35 +85,14 @@ export const ContactEN = () => {
             <div className="flex flex-col md:flex-row md:space-x-4 w-full">
               <FormField
                 control={form.control}
-                name="firstname"
+                name="name"
                 render={({ field }) => (
                   <FormItem className="flex-grow">
-                    <FormLabel className="text-lg text-white">
-                      Firstname
-                    </FormLabel>
+                    <FormLabel className="text-lg text-white">Name</FormLabel>
                     <FormControl>
                       <Input
                         className="bg-white"
                         placeholder="John"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="lastname"
-                render={({ field }) => (
-                  <FormItem className="flex-grow">
-                    <FormLabel className="text-lg text-white">
-                      Lastname
-                    </FormLabel>
-                    <FormControl>
-                      <Input
-                        className="bg-white"
-                        placeholder="Doe"
                         {...field}
                       />
                     </FormControl>
@@ -195,7 +170,11 @@ export const ContactEN = () => {
           className="flex-grow"
         >
           <Card className="bg-violet-600 hover:bg-gray-900 hover:border-white h-20 flex items-center justify-center">
-            <img src="mailto.png" alt="mail Julien Penna" className="pl-14 pr-14"/>
+            <img
+              src="mailto.png"
+              alt="mail Julien Penna"
+              className="pl-14 pr-14"
+            />
           </Card>
         </Link>
 
@@ -205,7 +184,11 @@ export const ContactEN = () => {
           className="flex-grow"
         >
           <Card className="bg-violet-600 hover:bg-blue-700 hover:border-white flex justify-center h-20 pl-7 pr-7">
-            <LinkedinIcon size={32} className="m-6" aria-label="Linkedin Julien Penna" />
+            <LinkedinIcon
+              size={32}
+              className="m-6"
+              aria-label="Linkedin Julien Penna"
+            />
           </Card>
         </Link>
         <Link
@@ -214,7 +197,11 @@ export const ContactEN = () => {
           className="flex-grow"
         >
           <Card className="bg-violet-600 hover:bg-gray-900 hover:border-white flex justify-center h-20 h-20 pl-7 pr-7">
-            <GithubIcon size={32} className="m-6" aria-label="GitHub Julien Penna" />
+            <GithubIcon
+              size={32}
+              className="m-6"
+              aria-label="GitHub Julien Penna"
+            />
           </Card>
         </Link>
       </div>

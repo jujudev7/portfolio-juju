@@ -7,20 +7,30 @@ export function ModeToggle() {
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
+    const header = document.querySelector(".header") as HTMLElement; // Assertion de type
+    const textArea = document.querySelector("textarea") as HTMLElement; // Assertion de type
+    const allInputs = document.querySelectorAll("input");
+
     if (isDarkMode) {
       document.body.classList.remove("dark");
-      const header = document.querySelector("header");
       if (header) {
-        header.style.backgroundColor = "#fff"; 
+        header.style.backgroundColor = "#fff";
+        textArea.style.backgroundColor = "#fff";
+        allInputs.forEach(input => {
+          input.style.backgroundColor = "#fff";
+        });
       }
     } else {
       document.body.classList.add("dark");
-      const header = document.querySelector("header");
       if (header) {
         header.style.backgroundColor = "#030712"; 
+        textArea.style.backgroundColor = "#030712";
+        allInputs.forEach(input => {
+          input.style.backgroundColor = "#030712";
+        });
       }
     }
-  };
+};
 
   return (
     <Button onClick={toggleTheme} className="mr-2">

@@ -82,7 +82,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #7c3aed;
+  color: rgb(124, 58, 237);
   word-spacing: 7px;
 }
 
@@ -94,7 +94,7 @@ h3 {
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   padding-bottom: 1rem;
 }
 
@@ -192,4 +192,80 @@ p {
 .text-destructive {
   color: yellow;
   font-size: 1rem;
+}
+
+/* Styles pour le mode sombre */
+.dark .header {
+  background-color: #030712;
+}
+
+.dark .card:hover {
+  background-color: #111827;
+}
+
+.dark .certifs li:hover {
+  background-color: #4c1d95;
+}
+
+.envelope-closed-icon {
+  display: none;
+}
+
+.h2-hover:hover .envelope-open-icon {
+  display: none;
+}
+
+.h2-hover:hover .envelope-closed-icon {
+  display: inline-block;
+}
+
+.bookmark-filled-icon {
+  display: none;
+}
+
+.h2-hover:hover .bookmark-icon {
+  display: none;
+}
+
+.h2-hover:hover .bookmark-filled-icon {
+  display: inline-block;
+}
+
+.lightingbolt-filled-icon {
+  display: none;
+}
+
+.h2-hover:hover .lightingbolt-icon {
+  display: none;
+}
+
+.h2-hover:hover .lightingbolt-filled-icon {
+  display: inline-block;
+}
+
+.mail:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(2px, 0, 0);
+  }
 }

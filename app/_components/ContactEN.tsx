@@ -1,7 +1,11 @@
 "use client";
 
 import { Section } from "./Section";
-import { EnvelopeOpenIcon, RocketIcon } from "@radix-ui/react-icons";
+import {
+  EnvelopeClosedIcon,
+  EnvelopeOpenIcon,
+  RocketIcon,
+} from "@radix-ui/react-icons";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -11,14 +15,13 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 
-import Image from 'next/image';
+import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
@@ -70,13 +73,14 @@ export const ContactEN = () => {
 
   return (
     <Section className="flex flex-col items-center justify-center mt-10">
-      <Card className="w-2/3 bg-primary mb-8">
+      <Card className="w-2/3 bg-primary mb-8 hover:shadow-[0_0_15px_rgba(124,58,237,1)]">
         <h2
           id="contact"
-          className="mt-8 mb-4 justify-center text-white flex items-center"
+          className="mt-8 mb-4 justify-center text-white flex items-center h2-hover"
         >
           <span>Contact</span>{" "}
-          <EnvelopeOpenIcon className="ml-4 mt-1 w-8 h-8" />
+          <EnvelopeOpenIcon className="ml-4 mt-1 w-8 h-8 envelope-open-icon" />
+          <EnvelopeClosedIcon className="ml-4 mt-1 w-8 h-8 envelope-closed-icon" />
         </h2>
         <Form {...form}>
           <form
@@ -93,7 +97,7 @@ export const ContactEN = () => {
                     <FormControl>
                       <Input
                         className="bg-white"
-                        placeholder="John"
+                        placeholder="John Doe"
                         {...field}
                       />
                     </FormControl>
@@ -170,11 +174,11 @@ export const ContactEN = () => {
           target="_blank"
           className="flex-grow"
         >
-          <Card className="bg-violet-600 hover:bg-black hover:border-white h-20 flex items-center justify-center">
+          <Card className="mail bg-violet-600 hover:bg-black hover:border-white h-20 flex items-center justify-center">
             <Image
               src="/mailto.png"
               alt="mail Julien Penna"
-              width={600} 
+              width={600}
               height={100}
               className="pl-14 pr-14"
             />

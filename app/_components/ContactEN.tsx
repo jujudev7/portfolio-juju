@@ -73,10 +73,10 @@ export const ContactEN = () => {
 
   return (
     <Section className="flex flex-col items-center justify-center mt-10">
-      <Card className="w-2/3 bg-primary mb-8 hover:shadow-[0_0_15px_rgba(124,58,237,1)]">
+      <Card className="contact w-2/3 bg-primary mb-8 hover:shadow-[0_0_15px_rgba(124,58,237,1)]">
         <h2
           id="contact"
-          className="mt-8 mb-4 justify-center text-white flex items-center h2-hover"
+          className="mt-8 mb-4 text-white flex justify-center items-center h2-hover"
         >
           <span>Contact</span>{" "}
           <EnvelopeOpenIcon className="ml-4 mt-1 w-8 h-8 envelope-open-icon" />
@@ -85,7 +85,7 @@ export const ContactEN = () => {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="w-2/3 space-y-4 mx-auto"
+            className="w-2/3 space-y-4 mx-auto md:w-3/4 lg:w-3/4"
           >
             <div className="flex flex-col md:flex-row md:space-x-4 w-full">
               <FormField
@@ -180,7 +180,7 @@ export const ContactEN = () => {
               alt="mail Julien Penna"
               width={600}
               height={100}
-              className="pl-14 pr-14"
+              className="mailto-img pl-14 pr-14"
             />
           </Card>
         </Link>
@@ -190,10 +190,10 @@ export const ContactEN = () => {
           target="_blank"
           className="flex-grow"
         >
-          <Card className="bg-violet-600 hover:bg-blue-700 hover:border-white flex justify-center h-20 pl-7 pr-7">
+          <Card className="card-linkedin bg-violet-600 hover:bg-blue-700 hover:border-white flex justify-center h-20 pl-7 pr-7">
             <LinkedinIcon
               size={32}
-              className="m-6"
+              className="linkedin-icon m-6"
               aria-label="Linkedin Julien Penna"
             />
           </Card>
@@ -203,10 +203,10 @@ export const ContactEN = () => {
           target="_blank"
           className="flex-grow"
         >
-          <Card className="bg-violet-600 hover:bg-black hover:border-white flex justify-center h-20 h-20 pl-7 pr-7">
+          <Card className="card-github bg-violet-600 hover:bg-black hover:border-white flex justify-center h-20 h-20 pl-7 pr-7">
             <GithubIcon
               size={32}
-              className="m-6"
+              className="github-icon m-6"
               aria-label="GitHub Julien Penna"
             />
           </Card>

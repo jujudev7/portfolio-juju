@@ -60,22 +60,13 @@
   }
 }
 
+body {
+  padding: 0 20px;
+}
+
 h1 {
   font-weight: bold;
   margin-bottom: 80px;
-}
-
-.name {
-  font-family: "Major Mono Display", monospace;
-  font-size: 3rem;
-}
-
-.job {
-  font-family: "Poppins", sans-serif;
-  font-size: 2.4rem;
-  font-weight: 600;
-  color: #7c3aed;
-  word-spacing: 7px;
 }
 
 h2 {
@@ -93,18 +84,28 @@ h3 {
   word-spacing: 7px;
 }
 
-p {
+.heading p {
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+}
+
+.projects p {
   font-size: 1.2rem;
   padding-bottom: 1rem;
 }
 
-/* .github-icon:hover path {
-  fill: #161614;
+.name {
+  font-family: "Major Mono Display", monospace;
+  font-size: 3rem;
 }
 
-.linkedin-icon:hover path {
-  fill: #0a66c2;
-} */
+.job {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #7c3aed;
+  word-spacing: 7px;
+}
 
 .header {
   background: #fff;
@@ -112,37 +113,22 @@ p {
 
 .menu {
   font-family: var(--poppins);
-  font-weight: bold;
   font-size: 1.25rem;
 }
 
-.menu a {
-  padding: 0.25rem 1rem;
-}
-
-.menu a:hover {
-  background: #7c3aed;
-  color: #fff;
-}
-
 .menu-link {
-  position: relative;
-  text-decoration: underline 2px solid #7c3aed;
-  text-underline-offset: 0.42rem;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  text-decoration: underline #7c3aed 1.75px;
+  text-underline-offset: 7px;
 }
 
-.menu-link:hover {
-  background-color: #7c3aed;
-  border-radius: 20px;
-  color: #fff;
+.menu-link:hover{
+  text-decoration: none;
 }
 
 .heading {
   margin-bottom: 80px;
-}
-
-.description {
-  margin: 40px 40px 40px 0;
 }
 
 /* Conteneur principal pour l'effet flip */
@@ -269,3 +255,116 @@ p {
     transform: translate3d(2px, 0, 0);
   }
 }
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 1024px) {
+  .menu a {
+    padding: 0.25rem 0.5rem;
+  }
+
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  .heading {
+    margin-bottom: 50px;
+  }
+
+  .contact,
+  .contacts {
+    width: 75%;
+  }
+
+  .mailto-img {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .menu a {
+    padding: 0.25rem 0;
+  }
+
+  .heading {
+    margin-top: 20px;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .contact,
+  .contacts {
+    width: 75%;
+  }
+
+  .mailto-img {
+    padding: 0 5px;
+  }
+}
+
+.card-linkedin .linkedin-icon {
+  transition: transform 0.5s;
+}
+
+.card-linkedin:hover .linkedin-icon {
+  transform: scale(0.9) rotate(360deg);
+}
+
+
+.card-github  {
+  position: relative;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+}
+
+.card-github:hover {
+  background-color: rgb(56, 56, 56);
+}
+
+.card-github:hover .github-icon {
+  animation: githubIcon 0.9s both;
+}
+
+/* github icon animation keyframes*/
+@keyframes githubIcon {
+  0%,
+  100% {
+    transform-origin: top;
+  }
+
+  15% {
+    transform: rotateZ(10deg);
+  }
+
+  30% {
+    transform: rotateZ(-10deg);
+  }
+
+  45% {
+    transform: rotateZ(5deg);
+  }
+
+  60% {
+    transform: rotateZ(-5deg);
+  }
+
+  75% {
+    transform: rotateZ(3deg);
+  }
+}
+
+.card-github:active {
+  transform: scale(0.8);
+} 

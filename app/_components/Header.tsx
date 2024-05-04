@@ -3,15 +3,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
 import { SwitchLanguage } from "./SwitchLanguage";
+import React, { useEffect } from "react";
 
 export const Header = () => {
+  useEffect(() => {
+    const contactLink = document.querySelector(".contact-link");
+
+    if (contactLink) {
+      contactLink.innerHTML =
+        "<div><span>" +
+        contactLink.textContent!.trim().split("").join("</span><span>") +
+        "</span></div>";
+    }
+  }, []); // Utiliser une dépendance vide pour s'assurer que le code ne s'exécute qu'une fois après le rendu initial
+
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     const targetId = e.currentTarget.getAttribute("href")?.substring(1);
     const targetElement = document.getElementById(targetId!);
 
     if (targetElement) {
-      // Vérification si targetElement n'est pas null
       const offset = -100;
       const targetPosition = targetElement.offsetTop + offset;
       window.scrollTo({
@@ -22,30 +33,52 @@ export const Header = () => {
   };
 
   return (
-    <Section className="header flex justify-between items-center sticky top-0 z-10 pb-2">
-      <Link href="" className="pl-2">
-        <Image src="j.svg" alt="logo jujudev7.com" width={100} height={100} className="w-10 mt-2" />
-      </Link>
-      <ul className="menu space-x-10">
-        <Link className="menu-link" href="#about" onClick={handleScroll}>
-          About
+    <div className="header w-full bg-white sticky top-0 z-10">
+      <Section className="zone-menu flex justify-between items-center sticky top-0 z-10 p-2">
+        <Link href="/">
+          <Image
+            src="j.svg"
+            alt="J, logo julienpenna.com"
+            width={32}
+            height={32}
+            className="w-10 mt-2"
+          />
         </Link>
-        <Link className="menu-link" href="#projects" onClick={handleScroll}>
-          Projects
-        </Link>
-        <Link
-          className="menu-link"
-          href="#certifications"
-          onClick={handleScroll}
-        >
-          Certifs
-        </Link>
-        <Link className="menu-link" href="#contact" onClick={handleScroll}>
-          Contact
-        </Link>
-      </ul>
-      <SwitchLanguage />
-      <ModeToggle />
-    </Section>
+        <ul className="menu">
+          <Link
+            className="about-link menu-link"
+            href="#about"
+            onClick={handleScroll}
+          >
+            About
+          </Link>
+          <Link
+            className="projects-link menu-link"
+            href="#projects"
+            onClick={handleScroll}
+          >
+            <span className="text">Projects</span>
+            <span className="marquee">Projects</span>
+          </Link>
+          <Link
+            className="menu-link certifs-link certifs-link--gooey"
+            href="#certifications"
+            onClick={handleScroll}
+          >
+            Certifs
+            <div className="certifs-link__blobs">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </Link>
+          <Link className="contact-link menu-link" href="#contact" onClick={handleScroll}>
+            Contact
+          </Link>
+        </ul>
+        <SwitchLanguage />
+        <ModeToggle />
+      </Section>
+    </div>
   );
 };

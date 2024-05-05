@@ -1,9 +1,9 @@
 import { Section } from "./Section";
 import Image from "next/image";
 import Link from "next/link";
-import { ModeToggle } from "./ModeToggle";
 import { SwitchLanguage } from "./SwitchLanguage";
 import React, { useEffect } from "react";
+import { ModeToggle } from "./ModeToggle";
 
 export const Header = () => {
   useEffect(() => {
@@ -37,11 +37,11 @@ export const Header = () => {
       <Section className="zone-menu flex justify-between items-center sticky top-0 z-10 p-2">
         <Link href="/">
           <Image
-            src="j.svg"
+            src="/j.svg"
             alt="J, logo julienpenna.com"
             width={32}
             height={32}
-            className="w-10 mt-2"
+            className="logo w-10 mt-2"
           />
         </Link>
         <ul className="menu">

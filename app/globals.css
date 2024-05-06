@@ -121,21 +121,21 @@ h3 {
   text-transform: uppercase;
   border: 1.75px solid #7c3aed;
   border-radius: 20px;
-  display: inline-block; 
+  display: inline-block;
   text-align: center;
-  width: 105px; 
+  width: 105px;
   margin: 0 20px;
   vertical-align: middle;
 }
 
-.menu-link:hover{
+.menu-link:hover {
   color: white;
   font-weight: bold;
   background: #7c3aed;
 }
 
 /* ABOUT BTN */
-.about-link  {
+.about-link {
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 0 0 black;
 }
@@ -143,27 +143,26 @@ h3 {
 .about-link:hover {
   transform: translateY(-3px) translateX(-2px);
   box-shadow: 2px 5px 0 0 black;
-};
+}
 
 .about-link:active {
   transform: translateY(2px) translateX(1px);
   box-shadow: 0 0 0 0 black;
-};
+}
 
-.dark .about-link  {
+.dark .about-link {
   box-shadow: 0 0 0 0 white;
 }
 
 .dark .about-link:hover {
   transform: translateY(-3px) translateX(-2px);
   box-shadow: 2px 5px 0 0 white;
-};
+}
 
 .dark .about-link:active {
   transform: translateY(2px) translateX(1px);
   box-shadow: 0 0 0 0 white;
-};
-
+}
 
 /* PROJECTS BTN */
 
@@ -192,8 +191,8 @@ h3 {
   --spacing: 6em;
   --start: 0em;
   --end: 6em;
-  -webkit-animation: marquee .825s linear infinite;
-  animation: marquee .825s linear infinite;
+  -webkit-animation: marquee 0.825s linear infinite;
+  animation: marquee 0.825s linear infinite;
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
   opacity: 0;
@@ -241,7 +240,7 @@ h3 {
 }
 
 .certifs-link:hover {
- background: none;
+  background: none;
 }
 
 .certifs-link--gooey {
@@ -289,7 +288,6 @@ h3 {
 .certifs-link--gooey:hover .certifs-link__blobs div {
   transform: scale(1.5) translateY(0) translateZ(0);
 }
-
 
 /* CONTACT BTN  */
 .contact-link {
@@ -347,55 +345,78 @@ h3 {
 }
 
 .contact-link:hover span {
-  --m: calc(var(--font-size) * -1.2);
-  margin-top: 5px;
+  --m: calc(var(--font-size) * -1);
 }
 .contact-link.reverse {
-  --font-shadow: calc(var(--font-size) * -1.2);
+  --font-shadow: calc(var(--font-size) * -1);
 }
 .contact-link.reverse:hover span {
   --m: calc(var(--font-size));
 }
 
-
+/* HERO SECTION  */
 
 .heading {
   margin-bottom: 80px;
 }
 
-/* Conteneur principal pour l'effet flip */
-.flip-container {
-  perspective: 1600px;
+.photo-container {
+  width: 360px;
+  height: 240px;
+  margin: 10px;
+  float: left; /* stack each div horizontally */
 }
 
-/* Conteneur de l'élément qui sera retourné */
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
+img {
+  border-radius: 10px;
 }
 
-/* Face avant de l'élément */
-.front,
-.back {
+.dark .strong {
+  color:#6ee7b7;
+}
+/* style the maincontainer class with all child div's of class .front */
+.photo-container > .front {
   position: absolute;
-  backface-visibility: hidden;
+  transform: perspective(600px) rotateY(0deg);
+  backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+  transition: transform 0.5s linear 0s;
 }
 
-/* Face avant */
-.front {
-  z-index: 2;
-  transform: rotateY(0deg);
+/* style the maincontainer class with all child div's of class .back */
+.photo-container > .back {
+  position: absolute;
+  transform: perspective(600px) rotateY(180deg);
+  width: 360px;
+  height: 240px;
+  background:#6d28d9;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+  transition: transform 0.5s linear 0s;
 }
 
-/* Face arrière */
-.back {
-  transform: rotateY(180deg);
-  z-index: 1;
+.photo-container:hover > .front {
+  transform: perspective(600px) rotateY(-180deg);
 }
 
-/* Au survol, effectuer la rotation */
-.flip-container:hover .flipper {
-  transform: rotateY(180deg);
+.photo-container:hover > .back {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.back h3 {
+  color: #7c3aed;
+  font-size: 1.4rem;
+}
+
+.back p {
+  font-size: 0.9rem;
+}
+
+.exergue {
+  color: #6ee7b7;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .see-more:hover {
@@ -554,10 +575,9 @@ h3 {
   transform: scale(0.9) rotate(360deg);
 }
 
-
-.card-github  {
+.card-github {
   position: relative;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
 }
 
@@ -599,4 +619,4 @@ h3 {
 
 .card-github:active {
   transform: scale(0.8);
-} 
+}

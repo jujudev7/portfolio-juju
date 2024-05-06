@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function ModeToggle() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
@@ -47,14 +48,35 @@ export function ModeToggle() {
   };
 
   return (
-    <>
-      <Button onClick={toggleTheme}>
-        {isDarkMode ? (
-          <MoonIcon className="h-[1.2rem] w-[1.2rem] rotate-90 scale-100 transition-all" />
-        ) : (
-          <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
-        )}
-      </Button>
-    </>
+    <Button
+      onClick={toggleTheme}
+      className={`pl-5 pr-5 transition duration-700 border border-transparent hover:border hover:border-violet-600 ${isDarkMode ? 'hover:bg-white' : 'hover:bg-gray-950'}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {isDarkMode ? (
+        <div className="relative">
+          <MoonIcon
+            style={{ transform: isHovered ? "scale(0)" : "scale(1)" }}
+            className="absolute top-[-10px] left-[-9.5px] h-[1.2rem] w-[1.2rem] transition-transform duration-300 ease-in-out"
+          />
+          <SunIcon
+            style={{ transform: isHovered ? "scale(1)" : "scale(0)" }}
+            className="text-violet-600 font-bold absolute top-[-10px] left-[-9.5px] h-[1.2rem] w-[1.2rem] transition-transform duration-300 ease-in-out"
+          />
+        </div>
+      ) : (
+        <div className="relative">
+          <SunIcon
+            style={{ transform: isHovered ? "scale(0)" : "scale(1)" }}
+            className="absolute top-[-10px] left-[-9.5px] h-[1.2rem] w-[1.2rem] transition-transform duration-300 ease-in-out"
+          />
+          <MoonIcon
+            style={{ transform: isHovered ? "scale(1)" : "scale(0)" }}
+            className="absolute top-[-10px] left-[-9.5px] h-[1.2rem] w-[1.2rem] transition-transform duration-300 ease-in-out"
+          />
+        </div>
+      )}
+    </Button>
   );
 }

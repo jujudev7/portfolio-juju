@@ -26,6 +26,10 @@ export function ModeToggle() {
         submitBtn.style.backgroundColor = "#030712";
         submitBtn.style.color = "#fff";
       });
+      submitBtn.addEventListener("mouseout", function () {
+        submitBtn.style.backgroundColor = "#fff";
+        submitBtn.style.color = "#7C3AED";
+      });
     } else {
       document.body.classList.add("dark");
       logoImg.src = "/j-dark.svg";
@@ -58,22 +62,22 @@ export function ModeToggle() {
         <div className="relative">
           <MoonIcon
             style={{ transform: isHovered ? "scale(0)" : "scale(1)" }}
-            className="absolute top-[-10px] left-[-9.5px] h-[1.2rem] w-[1.2rem] transition-transform duration-300 ease-in-out"
+            className="absolute top-[-10px] left-[-9.5px] h-[1.2rem] w-[1.2rem] transition-transform duration-800 ease-in-out"
           />
           <SunIcon
             style={{ transform: isHovered ? "scale(1)" : "scale(0)" }}
-            className="text-violet-600 font-bold absolute top-[-10px] left-[-9.5px] h-[1.2rem] w-[1.2rem] transition-transform duration-300 ease-in-out"
+            className="text-violet-600 font-bold absolute top-[-10px] left-[-9.5px] h-[1.2rem] w-[1.2rem] transition-transform duration-800 ease-in-out"
           />
         </div>
       ) : (
         <div className="relative">
           <SunIcon
             style={{ transform: isHovered ? "scale(0)" : "scale(1)" }}
-            className="absolute top-[-10px] left-[-9.5px] h-[1.2rem] w-[1.2rem] transition-transform duration-300 ease-in-out"
+            className="absolute top-[-10px] left-[-9.5px] h-[1.2rem] w-[1.2rem] transition-transform duration-800 ease-in-out"
           />
           <MoonIcon
             style={{ transform: isHovered ? "scale(1)" : "scale(0)" }}
-            className="absolute top-[-10px] left-[-9.5px] h-[1.2rem] w-[1.2rem] transition-transform duration-300 ease-in-out"
+            className="absolute top-[-10px] left-[-9.5px] h-[1.2rem] w-[1.2rem] transition-transform duration-800 ease-in-out"
           />
         </div>
       )}

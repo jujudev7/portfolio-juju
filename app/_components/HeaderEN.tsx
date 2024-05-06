@@ -50,15 +50,15 @@ export const Header = () => {
             href="#about"
             onClick={handleScroll}
           >
-            À propos
+            About
           </Link>
           <Link
             className="projects-link menu-link"
             href="#projects"
             onClick={handleScroll}
           >
-            <span className="text">Projets</span>
-            <span className="marquee">Projets</span>
+            <span className="text">Projects</span>
+            <span className="marquee">Projects</span>
           </Link>
           <Link
             className="menu-link certifs-link certifs-link--gooey"
@@ -76,7 +76,7 @@ export const Header = () => {
             Contact
           </Link>
         </ul>
-        {/* <SwitchLanguage /> */}
+        <SwitchLanguage />
         <ModeToggle />
       </Section>
     </div>

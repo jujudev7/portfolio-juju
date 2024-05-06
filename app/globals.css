@@ -123,7 +123,7 @@ h3 {
   border-radius: 20px;
   display: inline-block;
   text-align: center;
-  width: 105px;
+  width: 114px;
   margin: 0 20px;
   vertical-align: middle;
 }
@@ -294,12 +294,15 @@ h3 {
   --font-size: 1rem;
   --duration: 0.44s;
   --font-shadow: 1rem;
-  padding-right: 2px;
+  padding: 0.25rem 1rem;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .contact-link div {
   display: flex;
   overflow: hidden;
+  justify-content: center;
   text-shadow: 0 var(--font-shadow) 0 var(--text);
 }
 
@@ -308,7 +311,8 @@ h3 {
   backface-visibility: hidden;
   font-style: normal;
   transition: transform var(--duration) ease;
-  transform: translateY(var(--m)) translateZ(0);
+  /* transform: translateY(var(--m)) translateZ(0); */
+  transform: translateX(-7px) translateY(var(--m)) translateZ(0);
 }
 
 .contact-link div span:nth-child(1) {

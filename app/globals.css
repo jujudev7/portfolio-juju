@@ -111,12 +111,9 @@ h3 {
   background: #fff;
 }
 
-.menu {
+.menu-link {
   font-family: var(--poppins);
   font-size: 1rem;
-}
-
-.menu-link {
   padding: 0.25rem 1rem;
   text-transform: uppercase;
   border: 1.75px solid #7c3aed;
@@ -376,7 +373,7 @@ img {
 }
 
 .dark .strong {
-  color:#6ee7b7;
+  color: #6ee7b7;
 }
 /* style the maincontainer class with all child div's of class .front */
 .photo-container > .front {
@@ -392,7 +389,7 @@ img {
   transform: perspective(600px) rotateY(180deg);
   width: 360px;
   height: 240px;
-  background:#6d28d9;
+  background: #6d28d9;
   color: #fff;
   border-radius: 10px;
   padding: 20px;
@@ -406,11 +403,6 @@ img {
 
 .photo-container:hover > .back {
   transform: perspective(600px) rotateY(0deg);
-}
-
-.back h3 {
-  color: #7c3aed;
-  font-size: 1.4rem;
 }
 
 .back p {
@@ -516,31 +508,85 @@ img {
 /* RESPONSIVE DESIGN */
 
 @media screen and (max-width: 1024px) {
-  .menu a {
-    padding: 0.25rem 0.5rem;
+
+  .logo {
+    width: 32px;
+  }
+  .menu-link {
+    padding: 0.25rem 1rem;
+    margin: 0 10px;
+    font-size: 0.9rem;
+    width: 102px;
+  }
+
+  .about-link {
+    padding: 0.25rem 0.85rem;
+  }
+
+  .fr,
+  .en {
+    font-size: 0.9rem;
+  }
+
+  .heading {
+    margin-top: 20px;
+    margin-bottom: 50px;
   }
 
   h1 {
     margin-bottom: 50px;
+    text-align: center;
   }
 
-  .heading {
-    margin-bottom: 50px;
+  .photo-container > .back,
+  .photo-container > .front {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
   }
 
-  .contact,
-  .contacts {
+  /* .section-contact {
+    margin-bottom: 0px;
+  } */
+
+  .oc {
+    font-size: 2rem;
+    margin-right: 5px;
+  }
+
+  .contact {
     width: 75%;
   }
 
+  .contacts{
+    width: 75%;
+    margin-bottom: 50px;
+  }
+
   .mailto-img {
-    padding: 0 20px;
   }
 }
 
 @media screen and (max-width: 769px) {
-  .menu a {
-    padding: 0.25rem 0;
+  .menu-link {
+    padding: 0.25rem 0.25rem;
+    margin: 0 5px;
+    font-size: 0.8rem;
+    width: 76px;
+  }
+
+  .fr {
+    font-size: 0.8rem;
+    padding-right: 5px;
+  }
+
+  .en {
+    font-size: 0.8rem;
+    padding-left: 5px;
+  }
+
+  .mode-btn {
+    transform: scale(0.8);
   }
 
   .heading {
@@ -549,6 +595,66 @@ img {
 
   h1 {
     margin-bottom: 20px;
+  }
+
+  .job {
+    font-size: 2.1rem;
+    word-spacing: 7px;
+  }
+
+  .card-juju {
+    flex-direction: column;
+  }
+
+  .right-div-about {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .photo-container {
+    width: 440px;
+  }
+
+  .photo-juju {
+    width: 100%;
+  }
+
+  .photo-container > .front {
+    width: 420px;
+    justify-content: center;
+  }
+
+  .photo-container > .back {
+    width: 420px;
+    height: 280px;
+  }
+
+  .photo-container:hover > .back {
+    width: 420px;
+  }
+
+  .back p {
+    font-size: 1rem;
+    padding-top: 6px;
+  }
+
+  .projects {
+    margin-bottom: 30px;
+  }
+
+  #projects {
+    margin-bottom: 20px;
+  }
+
+  .certifs {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .oc {
+    font-size: 1.5rem;
+    /* margin-right: 5px; */
   }
 
   .cards-grid {
@@ -561,13 +667,38 @@ img {
     margin-bottom: 20px;
   }
 
-  .contact,
+  form {
+    width: 80% !important;
+  }
+
+  .submit {
+    margin-bottom: 30px !important;
+  }
+
+  .contact {
+    width: 75%;
+    margin-bottom: 20px;
+  }
+
   .contacts {
     width: 75%;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
+  .email-link {
+    width: 100%;
+  }
+
+  .linkedin-link,
+  .github-link {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
   }
 
   .mailto-img {
-    padding: 0 5px;
+    width: 69%;
   }
 }
 
@@ -591,6 +722,12 @@ img {
 
 .card-github:hover .github-icon {
   animation: githubIcon 0.9s both;
+}
+
+@media screen and (max-width: 769px) {
+  .contact-link div span {
+    transform: translateX(-1px) translateY(var(--m)) translateZ(0);
+  }
 }
 
 /* github icon animation keyframes*/

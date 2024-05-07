@@ -13,8 +13,8 @@ export const Hero = () => {
           </i>
         </h1>
       </div>
-      <div className="flex">
-        <div className="flex-[2]">
+      <div className="card-juju flex">
+        <div className="julien flex-[2]">
           <p>Salut 👋 moi c&apos;est Julien,</p>
           <p>
             Je suis un développeur front-end français, spécialisé en{" "}
@@ -28,7 +28,7 @@ export const Hero = () => {
             relever de nouveaux défis !
           </p>
         </div>
-        <div className="flex-1 ml-4">
+        <div className="right-div-about flex-1">
           <div className="photo-container rounded-xl">
             <div className="back">
               <p>
@@ -53,6 +53,7 @@ export const Hero = () => {
                   width={360}
                   height={240}
                   alt="portrait Julien Penna"
+                  className="photo-juju"
                 />
               </div>
             </div>

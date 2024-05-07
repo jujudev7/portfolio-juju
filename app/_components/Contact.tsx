@@ -72,7 +72,7 @@ export const Contact = () => {
   }
 
   return (
-    <Section className="flex flex-col items-center justify-center mt-10">
+    <Section className="section-contact flex flex-col items-center justify-center mt-10">
       <Card className="contact w-2/3 bg-primary mb-8 hover:shadow-[0_0_15px_rgba(124,58,237,1)]">
         <h2
           id="contact"
@@ -172,7 +172,7 @@ export const Contact = () => {
         <Link
           href="mailto:penna.julien@gmail.com"
           target="_blank"
-          className="flex-grow"
+          className="email-link flex-grow"
         >
           <Card className="mail bg-violet-600 hover:bg-black hover:border-white h-20 flex items-center justify-center">
             <Image
@@ -180,7 +180,7 @@ export const Contact = () => {
               alt="mail Julien Penna"
               width={600}
               height={100}
-              className="mailto-img pl-14 pr-14"
+              className="mailto-img w-50 pl-8 pr-8"
             />
           </Card>
         </Link>
@@ -188,7 +188,7 @@ export const Contact = () => {
         <Link
           href="https://www.linkedin.com/in/dev-web-front-end-julien-penna/"
           target="_blank"
-          className="flex-grow"
+          className="linkedin-link flex-grow"
         >
           <Card className="card-linkedin bg-violet-600 hover:bg-blue-700 hover:border-white flex justify-center h-20 pl-7 pr-7">
             <LinkedinIcon
@@ -201,7 +201,7 @@ export const Contact = () => {
         <Link
           href="https://github.com/jujudev7"
           target="_blank"
-          className="flex-grow"
+          className="github-link flex-grow"
         >
           <Card className="card-github bg-violet-600 hover:bg-black hover:border-white flex justify-center h-20 h-20 pl-7 pr-7">
             <GithubIcon

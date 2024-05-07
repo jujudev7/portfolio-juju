@@ -1,5 +1,9 @@
 import { Section } from "./Section";
-import { BookmarkFilledIcon, BookmarkIcon, CheckCircledIcon } from "@radix-ui/react-icons";
+import {
+  BookmarkFilledIcon,
+  BookmarkIcon,
+  CheckCircledIcon,
+} from "@radix-ui/react-icons";
 
 export const Certifs = () => {
   // Liste de certifications
@@ -15,11 +19,17 @@ export const Certifs = () => {
 
   return (
     <Section className="certifs flex flex-col items-center justify-center mt-10 mb-20">
-      <h2 id="certifications" className="pb-4 flex items-center h2-hover">
-        <span>Mes Certifications OpenClassrooms</span>{" "}
-        <BookmarkIcon className="ml-4 mt-1 w-8 h-8 group-hover:translate-x-2 bookmark-icon" />
-        <BookmarkFilledIcon className="ml-4 mt-1 w-8 h-8 group-hover:translate-x-2 bookmark-filled-icon" />
+      <h2
+        id="certifications"
+        className="pb-4 flex justify-center items-center h2-hover mx-auto"
+      >
+        <span className="oc text-right mr-0">Mes Certifications OpenClassrooms</span>
+        {/* <div className="certif-icon text-left"> */}
+          <BookmarkIcon className="w-8 h-8 bookmark-icon" />
+          <BookmarkFilledIcon className="w-8 h-8 bookmark-filled-icon" />
+        {/* </div> */}
       </h2>
+
       <ul className="space-y-2">
         {certifications.map((certification) => (
           <li

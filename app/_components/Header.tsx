@@ -76,7 +76,7 @@ export const Header = () => {
             Contact
           </Link>
         </ul>
-        {/* <SwitchLanguage /> */}
+        <SwitchLanguage />
         <ModeToggle />
       </Section>
     </div>

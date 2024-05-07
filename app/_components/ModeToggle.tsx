@@ -54,7 +54,7 @@ export function ModeToggle() {
   return (
     <Button
       onClick={toggleTheme}
-      className={`pl-5 pr-5 transition duration-700 border border-transparent hover:border hover:border-violet-600 ${isDarkMode ? 'hover:bg-white' : 'hover:bg-gray-950'}`}
+      className={`mode-btn pl-5 pr-5 transition duration-700 border border-transparent hover:border hover:border-violet-600 ${isDarkMode ? 'hover:bg-white' : 'hover:bg-gray-950'}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

@@ -20,42 +20,12 @@ export const Projects = () => {
         <h2
           id="projects"
           className="mb-10 text-center justify-center flex items-center h2-hover"
-          data-glitch="Projects"
         >
           <span>Projects</span>
           <LightningBoltIcon className="ml-4 mt-1 w-8 h-8 lightingbolt-icon" />
           <LigthingboltFilledIcon className="ml-4 mt-1 w-8 h-8 lightingbolt-filled-icon" />
         </h2>
-        <div className="grid gap-6 grid-cols-2">
-          {/* <Card className="card transition transform hover:scale-105 hover:bg-violet-100">
-            <CardHeader>
-              <CardTitle className="mb-4">LesPetitsPlats 👨‍🍳</CardTitle>
-              <div className="overflow-hidden rounded-md border-2 border-primary">
-                <Image
-                  alt="React Rendezvous"
-                  loading="lazy"
-                  width="600"
-                  height="400"
-                  decoding="async"
-                  className="h-auto object-cover transition-all hover:scale-110"
-                  src="/jujudev7.jpg"
-              />
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p>Ohmyfood! est une entreprise de commande de repas en ligne.</p>
-              <p>
-                <strong>Mission :</strong> Intégration des maquettes, animations
-                CSS + loader.
-              </p>
-            </CardContent>
-            <CardFooter className="flex justify-end">
-              <Button className="ml-auto group hover:bg-gray-900 see-more">
-                Voir le site{" "}
-                <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />
-              </Button>
-            </CardFooter>
-          </Card> */}
+        <div className="cards-grid grid gap-8 grid-cols-2">
           <Card className="card transition transform hover:scale-105 hover:bg-violet-100">
             <CardHeader>
               <CardTitle className="mb-4">Fisheye 📸</CardTitle>
@@ -83,7 +53,7 @@ export const Projects = () => {
                 leurs meilleurs travaux via un portfolio.
               </p>
               <p>
-                <strong>Missions :</strong> Créer un site accessible pour une
+                <strong className="strong">Missions :</strong> Créer un site accessible pour une
                 plateforme de photographes.
               </p>
               <p>
@@ -128,7 +98,7 @@ export const Projects = () => {
                 jeux vidéo.
               </p>
               <p>
-                <strong>Missions :</strong> Créer une landing page avec
+                <strong className="strong">Missions :</strong> Créer une landing page avec
                 Javascript.
               </p>
               <p>
@@ -177,7 +147,7 @@ export const Projects = () => {
                 restauration et la commande de repas en ligne.
               </p>
               <p>
-                <strong>Missions : </strong>Dynamiser des pages web avec des
+                <strong className="strong">Missions : </strong>Dynamiser des pages web avec des
                 animations CSS, utilisation de Sass.
               </p>
               <p>
@@ -220,7 +190,7 @@ export const Projects = () => {
                 activités dans la ville de leur choix.
               </p>
               <p>
-                <strong>Missions : </strong>Transformer une maquette Figma en
+                <strong className="strong">Missions : </strong>Transformer une maquette Figma en
                 site web avec HTML & CSS.
               </p>
               <p>Développer une interface responsive.</p>

@@ -36,16 +36,16 @@ export function InputDemo() {
 
 const FormSchema = z.object({
   name: z.string().min(2, {
-    message: "* Lastname must be at least 2 characters.",
+    message: "* Votre nom doit contenir au moins 2 caractères.",
   }),
   subject: z.string().min(5, {
-    message: "* Subject must be at least 5 characters.",
+    message: "* Le sujet doit contenir au moins 5 caractères.",
   }),
   message: z.string().min(50, {
-    message: "* Message must be at least 50 characters.",
+    message: "* Votre message doit contenir au moins 50 caractères.",
   }),
   email: z.string().email({
-    message: "* Invalid email address",
+    message: "* Adresse email invalide !",
   }),
 });
 

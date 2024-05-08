@@ -14,7 +14,7 @@ export const Hero = () => {
         </h1>
       </div>
       <div className="card-juju flex">
-        <div className="julien flex-[2]">
+        <div className="flex-[2]">
           <p>Salut 👋 moi c&apos;est Julien,</p>
           <p>
             Je suis un développeur front-end français, spécialisé en{" "}

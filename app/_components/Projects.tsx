@@ -22,8 +22,8 @@ export const Projects = () => {
           className="mb-10 text-center justify-center flex items-center h2-hover"
         >
           <span>Projects</span>
-          <LightningBoltIcon className="ml-4 mt-1 w-8 h-8 lightingbolt-icon" />
-          <LigthingboltFilledIcon className="ml-4 mt-1 w-8 h-8 lightingbolt-filled-icon" />
+          <LightningBoltIcon className="ml-2 mt-1 w-8 h-8 lightingbolt-icon" />
+          <LigthingboltFilledIcon className="ml-2 mt-1 w-8 h-8 lightingbolt-filled-icon" />
         </h2>
         <div className="cards-grid grid gap-8 grid-cols-2">
           <Card className="card transition transform hover:scale-105 hover:bg-violet-100">

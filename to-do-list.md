@@ -1,8 +1,10 @@
 # TO-DO
-❌ changer la photo
-✅ gérer le flip
+❌ créer une modale confirmation message
 ❌ contact récupérer les messages
 ❌ ajouter un ScrollSpy
+❌ ajouter des certifs REACT
+✅ changer la photo
+✅ gérer le flip
 ✅ placer icone  
 ✅ gérer couleurs header  
 ✅ gérer couleur hover certifs  
@@ -15,7 +17,7 @@
 
 # DESIGN
 ✅ changer icone J darkmode
-❌ légèrement modifier hover about
+✅ légèrement modifier hover about
 ✅ modifier hover switcher
 ✅ hover ModeToggle
 

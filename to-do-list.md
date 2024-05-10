@@ -22,7 +22,7 @@
 ✅ hover ModeToggle
 
 RESPONSIVE
-❌ centrer icone certifs
+✅ centrer icone certifs
 
 ❌ ajouter particlues ou autre effet visuel en bg
 ❌ ajouter des spéarateurs entre les sections

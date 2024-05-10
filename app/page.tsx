@@ -17,8 +17,9 @@ export default function Home() {
       <Certifs />
       <Contact />
       <div className="flex justify-center items-center pb-4">
-      <span className="flex items-center">
-          Développé avec <HeartFilledIcon className="text-violet-600 ml-1 mr-1" /> par Julien
+        <span className="flex items-center">
+          Développé avec{" "}
+          <HeartFilledIcon className="text-violet-600 ml-1 mr-1" /> par Julien
           Penna
         </span>
       </div>

@@ -23,16 +23,13 @@ import {
 
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
-import { toast } from "@/components/ui/use-toast";
+
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { GithubIcon } from "./icons/GithubIcon";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
 import Link from "next/link";
-
-export function InputDemo() {
-  return <Input className="bg-white" type="email" placeholder="Email" />;
-}
+import React, { useState } from 'react';
 
 const FormSchema = z.object({
   name: z.string().min(2, {
@@ -59,17 +56,40 @@ export const Contact = () => {
       email: "",
     },
   });
+  console.log("Avant la soumission du formulaire");
+  // function onSubmit(data: z.infer<typeof FormSchema>) {
+  //   console.log("Soumission du formulaire en cours");
+  //   console.log("Données soumises :", data);
+  // }
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    });
-  }
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const onSubmit = async (data: z.infer<typeof FormSchema>) => {
+    try {
+      setIsSubmitting(true);
+      // Appel de l'API avec les données du formulaire
+      const response = await fetch("/api/send", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      console.log("Soumission du formulaire en cours");
+        console.log("Données soumises :", data);
+      if (response.ok) {
+        // Succès, réinitialiser le formulaire
+        form.reset();
+        // Afficher un message de réussite ou rediriger l'utilisateur
+      } else {
+        // Afficher un message d'erreur
+      }
+    } catch (error) {
+      // Gérer les erreurs de l'API
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <Section className="section-contact flex flex-col items-center justify-center mt-10">
@@ -159,6 +179,9 @@ export const Contact = () => {
             />
 
             <Button
+              onClick={async () => {
+                await fetch("api/send", { method: "POST" });
+              }}
               type="submit"
               className="submit p-6 text-lg bg-white text-primary hover:bg-gray-900 hover:text-white group"
             >
@@ -215,3 +238,7 @@ export const Contact = () => {
     </Section>
   );
 };
+// function useState(arg0: boolean): [any, any] {
+//   throw new Error("Function not implemented.");
+// }
+

@@ -32,24 +32,24 @@ export const Hero = () => {
           <div className="photo-container rounded-xl">
             <div className="back">
               <p>
-                Basé en <span className="exergue">région parisienne</span>, j'ai
+                Basé en <span className="exergue">région parisienne</span>, j&apos;ai
                 vécu quelque temps à Barcelone.
               </p>
               <p>
                 Je suis beaucoup le sport, surtout le{" "}
-                <span className="exergue">foot</span>. Supporter du PSG, bien avant l'arrivée des Qataris.
+                <span className="exergue">foot</span>. Supporter du PSG, bien avant l&apos;arrivée des Qataris.
               </p>
               <p>
                 Je fais près de <span className="exergue">2 mètres</span>.
               </p>
               <p>
-                J'aime <span className="exergue">l'humour</span>, la raclette, la pâte à tartiner...
+                J&apos;aime <span className="exergue">l&apos;humour</span>, la raclette, la pâte à tartiner...
               </p>
             </div>
             <div className="front">
               <div className="image">
                 <Image
-                  src="/jujudev7.jpg"
+                  src="jujudev7.jpg"
                   width={360}
                   height={240}
                   alt="portrait Julien Penna"

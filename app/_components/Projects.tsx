@@ -40,7 +40,7 @@ export const Projects = () => {
                     width="600"
                     height="400"
                     decoding="async"
-                    className="h-auto object-cover transition-all hover:scale-110"
+                    className="h-auto transition-all scale-101 rounded-none hover:scale-110"
                     src="/fisheye.gif"
                   />
                 </Link>
@@ -85,7 +85,7 @@ export const Projects = () => {
                     width="600"
                     height="400"
                     decoding="async"
-                    className="h-auto object-cover transition-all hover:scale-110"
+                    className="h-auto object-cover transition-all rounded-none hover:scale-110"
                     src="/gameon.gif"
                   />
                 </Link>
@@ -134,7 +134,7 @@ export const Projects = () => {
                     width="600"
                     height="400"
                     decoding="async"
-                    className="h-auto object-cover transition-all hover:scale-110"
+                    className="h-auto object-cover transition-all rounded-none hover:scale-110"
                     src="/ohmyfood.gif"
                   />
                 </Link>
@@ -143,7 +143,7 @@ export const Projects = () => {
             <CardContent>
               <p>
                 <span className="text-primary font-bold">Ohmyfood!</span> est
-                une jeune startup qui voudrait s'imposer sur le marché de la
+                une jeune startup qui voudrait s&apos;imposer sur le marché de la
                 restauration et la commande de repas en ligne.
               </p>
               <p>
@@ -176,7 +176,7 @@ export const Projects = () => {
                     width="600"
                     height="400"
                     decoding="async"
-                    className="h-auto object-cover transition-all hover:scale-110"
+                    className="h-auto object-cover transition-all rounded-none hover:scale-110"
                     src="/booki.gif"
                   />
                 </Link>

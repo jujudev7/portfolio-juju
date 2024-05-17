@@ -2,7 +2,6 @@
 const nextConfig = {
   images: {
     unoptimized: true,
-    // path: "https://julienpenna.com/",
   },
   output: "export",
 };

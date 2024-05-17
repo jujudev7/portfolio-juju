@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Julien Penna | Portfolio",
-  description: "Frontend Developper React, JavaScript, HTML/CSS",
+  description: "Développeur frontend - React JS, Next.js, JavaScript, HTML/CSS, Frontend Developper React",
 };
 
 export default function RootLayout({

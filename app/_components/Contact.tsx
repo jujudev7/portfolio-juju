@@ -1,11 +1,11 @@
 "use client";
 
-import { Section } from "./Section";
 import {
   EnvelopeClosedIcon,
   EnvelopeOpenIcon,
   RocketIcon,
 } from "@radix-ui/react-icons";
+import { Section } from "./Section";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -21,15 +21,14 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
-import Image from "next/image";
 import { Input } from "@/components/ui/input";
+import Image from "next/image";
 
-import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
+import Link from "next/link";
 import { GithubIcon } from "./icons/GithubIcon";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
-import Link from "next/link";
-import React, { useState } from 'react';
 
 const FormSchema = z.object({
   name: z.string().min(2, {
@@ -46,6 +45,50 @@ const FormSchema = z.object({
   }),
 });
 
+// export const Contact = () => {
+//   const form = useForm<z.infer<typeof FormSchema>>({
+//     resolver: zodResolver(FormSchema),
+//     defaultValues: {
+//       name: "",
+//       subject: "",
+//       message: "",
+//       email: "",
+//     },
+//   });
+//   // console.log("Avant la soumission du formulaire");
+//   // function onSubmit(data: z.infer<typeof FormSchema>) {
+//   //   console.log("Soumission du formulaire en cours");
+//   //   console.log("Données soumises :", data);
+//   // }
+
+//   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
+//     try {
+//       console.log("Soumission du formulaire en cours");
+
+//       // Appel de l'API avec les données du formulaire
+//       const response = await fetch("/api/send", {
+//         method: "POST",
+//         body: JSON.stringify(data),
+//         headers: {
+//           'Content-Type': 'application/json',
+//         }
+//       });
+
+//       if (response.ok) {
+//         // Succès, réinitialiser le formulaire
+//         console.log("Données soumises :", data);
+//         console.log("email success");
+//         form.reset();
+//         // Afficher un message de réussite ou rediriger l'utilisateur
+//       } else {
+//         // Afficher un message d'erreur
+//         console.log("email ERROR !");
+//       }
+//     } catch (error) {
+//       // Gérer les erreurs de l'API
+//     }
+//   };
+
 export const Contact = () => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -56,40 +99,30 @@ export const Contact = () => {
       email: "",
     },
   });
-  console.log("Avant la soumission du formulaire");
-  // function onSubmit(data: z.infer<typeof FormSchema>) {
-  //   console.log("Soumission du formulaire en cours");
-  //   console.log("Données soumises :", data);
-  // }
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  // const onSubmit = async (data: z.infer<typeof FormSchema>) => {
+  //   try {
+  //     console.log("Soumission du formulaire en cours");
 
-  const onSubmit = async (data: z.infer<typeof FormSchema>) => {
-    try {
-      setIsSubmitting(true);
-      // Appel de l'API avec les données du formulaire
-      const response = await fetch("/api/send", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      console.log("Soumission du formulaire en cours");
-        console.log("Données soumises :", data);
-      if (response.ok) {
-        // Succès, réinitialiser le formulaire
-        form.reset();
-        // Afficher un message de réussite ou rediriger l'utilisateur
-      } else {
-        // Afficher un message d'erreur
-      }
-    } catch (error) {
-      // Gérer les erreurs de l'API
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  //     const response = await fetch("/api/send", {
+  //       method: "POST",
+  //       body: JSON.stringify(data),
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     });
+
+  //     if (response.ok) {
+  //       console.log("Données soumises :", data);
+  //       console.log("email success");
+  //       form.reset();
+  //     } else {
+  //       console.log("email ERROR !");
+  //     }
+  //   } catch (error) {
+  //     console.log("API error", error);
+  //   }
+  // };
 
   return (
     <Section className="section-contact flex flex-col items-center justify-center mt-10">
@@ -104,7 +137,10 @@ export const Contact = () => {
         </h2>
         <Form {...form}>
           <form
-            onSubmit={form.handleSubmit(onSubmit)}
+            method="post"
+            action="mail.php"
+            onSubmit={() => console.log("Votre message a bien été envoyé !")}
+            // onSubmit={form.handleSubmit(onSubmit)}
             className="w-2/3 space-y-4 mx-auto md:w-3/4 lg:w-3/4"
           >
             <div className="flex flex-col md:flex-row md:space-x-4 w-full">
@@ -179,9 +215,6 @@ export const Contact = () => {
             />
 
             <Button
-              onClick={async () => {
-                await fetch("api/send", { method: "POST" });
-              }}
               type="submit"
               className="submit p-6 text-lg bg-white text-primary hover:bg-gray-900 hover:text-white group"
             >
@@ -241,4 +274,3 @@ export const Contact = () => {
 // function useState(arg0: boolean): [any, any] {
 //   throw new Error("Function not implemented.");
 // }
-

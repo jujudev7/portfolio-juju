@@ -19,7 +19,7 @@ export const ContactEmail = ({
           src={`${baseUrl}/static/j.png`}
           width="32"
           height="32"
-          alt="Koala"
+          alt="J"
           className="mx-auto"
         />
         <p className="text-lg mt-4">Hi {userFirstname},</p>

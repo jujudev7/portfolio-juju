@@ -39,7 +39,7 @@ export const Certifs = () => {
             className="flex items-center p-2 text-lg rounded-lg hover:bg-green-200"
           >
             <span className="mr-2 pr-2">{certification.name}</span>
-            <CheckCircledIcon className="h-5 w-5 text-green-500" />
+            <CheckCircledIcon className="checked h-5 w-5 text-green-500" />
           </li>
         ))}
       </ul>

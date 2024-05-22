@@ -66,7 +66,6 @@ body {
 }
 
 .header {
-  width: 960px;
   background: #fff;
 }
 
@@ -119,6 +118,10 @@ h3 {
   font-weight: 600;
   color: #7c3aed;
   word-spacing: 7px;
+}
+
+.oc {
+  margin-right: 5px;
 }
 
 .certifs li {
@@ -377,8 +380,9 @@ h3 {
 .photo-container {
   width: 360px;
   height: 240px;
-  margin: 10px;
-  float: left; /* stack each div horizontally */
+  margin-left: 10px;
+  margin-right: 20px;
+  float: left;
 }
 
 img {
@@ -600,12 +604,14 @@ img {
     margin-bottom: 50px;
     text-align: center;
   }
+  .photo-container {
+    margin-right: 0px;
+  }
 
   .photo-container > .back,
   .photo-container > .front {
     width: 330px;
     height: 300px;
-    margin: 10px;
   }
 
   .projects {
@@ -614,7 +620,6 @@ img {
 
   .oc {
     font-size: 2rem;
-    margin-right: 5px;
   }
 
   .contact {
@@ -753,7 +758,8 @@ img {
     font-size: 1rem;
   }
 
-  .bookmark-icon {
+  .bookmark-icon,
+  .bookmark-filled-icon {
     transform: scale(0.9);
   }
 
@@ -808,12 +814,22 @@ img {
 
   .logo {
     width: 28px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .mode-btn {
+    margin-right: 0px;
   }
 
   .menu-link {
     padding: 0.25rem 0.15rem;
     font-size: 0.75rem;
     width: 78px;
+  }
+
+  .menu > .menu-link + .menu-link {
+    margin-left: 10px;
   }
 
   .fr {
@@ -875,7 +891,8 @@ img {
   .mes {
     display: none;
   }
-  .bookmark-icon {
+  .bookmark-icon,
+  .bookmark-filled-icon {
     transform: scale(0.8);
   }
   .certifs li {
@@ -887,36 +904,115 @@ img {
   background: #6ee7b7;
 }
 
-@media screen and (max-width: 500px) {
-  .photo-container > .back,
+@media screen and (max-width: 479px) {
+  .zone-menu {
+    padding: 0 3px;
+  }
+
+  .logo {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .heading {
+    margin-bottom: 0px;
+  }
+
+  .name {
+    font-size: 1.7rem;
+  }
+
+  .job {
+    font-size: 1.1rem;
+  }
+
+  .heading p {
+    font-size: 1rem;
+  }
+
+  .photo-container {
+    width: 320px;
+  }
+
+  .right-div-about {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+  }
+  .photo-juju {
+    width: 100%;
+  }
+
   .photo-container > .front {
-    width: 95vw;
-    /* height: 300px; */
-    margin: 10px;
+    width: 300px;
+    height: 220px;
+    justify-content: center;
+  }
+
+  .photo-container > .back {
+    width: 300px;
+  }
+
+  .photo-container:hover {
+    margin-bottom: 70px;
+  }
+
+  .photo-container:hover > .back {
+    width: 300px;
+  }
+
+  .back p {
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+  }
+
+  .exergue {
+    font-size: 1rem;
+  }
+
+  #projects {
+    font-size: 2rem;
   }
 
   .cards-grid {
     width: 95%;
   }
 
-  .oc {
-    margin-right: 5px;
-  }
-
   #certifications {
     width: 95%;
+    padding-bottom: 5px;
   }
 
-  /* .bookmark-icon {
-    transform: scale(0.8);
-  } */
+  .oc {
+    font-size: 1.1rem;
+    letter-spacing: -0.1px;
+    margin-right: 0px;
+  }
+  .bookmark-icon,
+  .bookmark-filled-icon {
+    transform: scale(0.6);
+  }
 
   .certifs li {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    letter-spacing: -0.1px;
+    padding: 0px 5px;
+  }
+
+  .checked {
+    width: 15px;
   }
 
   .contact {
     width: 95%;
+  }
+
+  #contact {
+    font-size: 2rem;
+  }
+
+  form {
+    width: 97%;
   }
 
   .contacts {

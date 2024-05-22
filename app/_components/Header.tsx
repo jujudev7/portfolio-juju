@@ -39,7 +39,7 @@ export const Header = () => {
             alt="J, logo julienpenna.com"
             width={32}
             height={32}
-            className="logo w-10 mt-2"
+            className="logo ml-4 w-10 mt-2"
           />
         </Link>
         <ul className="menu flex space-x-8">

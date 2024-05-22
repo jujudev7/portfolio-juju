@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
+import { useState } from "react";
 
 export function ModeToggle() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -54,9 +54,12 @@ export function ModeToggle() {
   return (
     <Button
       onClick={toggleTheme}
-      className={`mode-btn pl-5 pr-5 transition duration-700 border border-transparent hover:border hover:border-violet-600 ${isDarkMode ? 'hover:bg-white' : 'hover:bg-gray-950'}`}
+      className={`mode-btn pl-5 pr-5 transition duration-700 border border-transparent hover:border hover:border-violet-600 ${
+        isDarkMode ? "hover:bg-white" : "hover:bg-gray-950"
+      }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      aria-label="Changer le mode: clair ou sombre"
     >
       {isDarkMode ? (
         <div className="relative">

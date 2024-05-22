@@ -61,7 +61,13 @@
 }
 
 body {
+  margin: 0;
   padding: 0 20px;
+}
+
+.header {
+  width: 960px;
+  background: #fff;
 }
 
 .logo {
@@ -93,6 +99,10 @@ h3 {
   padding-bottom: 1rem;
 }
 
+.projects {
+  padding: 0 50px;
+}
+
 .projects p {
   font-size: 1.2rem;
   padding-bottom: 1rem;
@@ -111,8 +121,8 @@ h3 {
   word-spacing: 7px;
 }
 
-.header {
-  background: #fff;
+.certifs li {
+  font-size: 1.2rem;
 }
 
 .menu-link {
@@ -125,7 +135,6 @@ h3 {
   display: inline-block;
   text-align: center;
   width: 114px;
-  margin: 0 20px;
   vertical-align: middle;
 }
 
@@ -419,6 +428,10 @@ img {
   font-size: 1.1rem;
 }
 
+.hover-project {
+  transition-duration: 0.55s;
+}
+
 .see-more:hover {
   border: 1px solid white;
 }
@@ -570,20 +583,12 @@ img {
     width: 32px;
   }
 
-  .menu-link {
-    padding: 0.25rem 1rem;
-    margin: 0 10px;
-    font-size: 0.9rem;
-    width: 102px;
+  .header {
+    width: 100%;
   }
 
-  .about-link {
-    padding: 0.25rem 0.85rem;
-  }
-
-  .fr,
-  .en {
-    font-size: 0.9rem;
+  .menu > .menu-link + .menu-link {
+    margin-left: 35px;
   }
 
   .heading {
@@ -598,14 +603,14 @@ img {
 
   .photo-container > .back,
   .photo-container > .front {
-    width: 300px;
+    width: 330px;
     height: 300px;
     margin: 10px;
   }
 
-  /* .section-contact {
-    margin-bottom: 0px;
-  } */
+  .projects {
+    padding: 0;
+  }
 
   .oc {
     font-size: 2rem;
@@ -627,10 +632,17 @@ img {
 
 @media screen and (max-width: 769px) {
   .menu-link {
-    padding: 0.25rem 0.25rem;
-    margin: 0 5px;
-    font-size: 0.8rem;
-    width: 76px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+    width: 90px;
+  }
+
+  .menu > .menu-link + .menu-link {
+    margin-left: 15px;
+  }
+
+  .contact-link:hover div {
+    padding-right: 0.25rem;
   }
 
   .contact-link div span {
@@ -655,6 +667,10 @@ img {
     margin-top: 10px;
   }
 
+  .name {
+    font-size: 2.7rem;
+  }
+
   h1 {
     margin-bottom: 20px;
   }
@@ -666,6 +682,10 @@ img {
 
   .card-juju {
     flex-direction: column;
+  }
+
+  .heading p {
+    font-size: 1.1rem;
   }
 
   .right-div-about {
@@ -705,6 +725,10 @@ img {
     margin-bottom: 30px;
   }
 
+  .projects p {
+    font-size: 1rem;
+  }
+
   #projects {
     margin-bottom: 20px;
   }
@@ -721,8 +745,21 @@ img {
 
   .cards-grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    width: 85%;
+    width: 85% !important;
     margin: 0 auto;
+  }
+
+  .certifs li {
+    font-size: 1rem;
+  }
+
+  .bookmark-icon {
+    transform: scale(0.9);
+  }
+
+  .contact {
+    width: 85%;
+    margin-bottom: 20px;
   }
 
   .card {
@@ -734,16 +771,11 @@ img {
   }
 
   .submit {
-    margin-bottom: 30px !important;
-  }
-
-  .contact {
-    width: 75%;
-    margin-bottom: 20px;
+    margin-bottom: 40px !important;
   }
 
   .contacts {
-    width: 75%;
+    width: 85%;
     flex-wrap: wrap;
     margin-bottom: 50px;
   }
@@ -765,9 +797,13 @@ img {
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    padding: 0px;
+  }
 
   .zone-menu {
-    padding-left: 0px;
+    width: 100%;
+    padding: 0 10px;
   }
 
   .logo {
@@ -776,10 +812,9 @@ img {
 
   .menu-link {
     padding: 0.25rem 0.15rem;
-    margin: 0 2px;
-    font-size: 0.7rem;
-    width: 70px;
-}
+    font-size: 0.75rem;
+    width: 78px;
+  }
 
   .fr {
     margin-right: 0px;
@@ -828,6 +863,7 @@ img {
   }
 
   .cards-grid {
+    width: 90% !important;
     gap: 1rem;
   }
 
@@ -836,10 +872,12 @@ img {
     width: 90%;
   }
 
-  .oc {
-    font-size: 1.3rem;
+  .mes {
+    display: none;
   }
-
+  .bookmark-icon {
+    transform: scale(0.8);
+  }
   .certifs li {
     font-size: 1rem;
   }
@@ -847,4 +885,41 @@ img {
 
 .getstarted {
   background: #6ee7b7;
+}
+
+@media screen and (max-width: 500px) {
+  .photo-container > .back,
+  .photo-container > .front {
+    width: 95vw;
+    /* height: 300px; */
+    margin: 10px;
+  }
+
+  .cards-grid {
+    width: 95%;
+  }
+
+  .oc {
+    margin-right: 5px;
+  }
+
+  #certifications {
+    width: 95%;
+  }
+
+  /* .bookmark-icon {
+    transform: scale(0.8);
+  } */
+
+  .certifs li {
+    font-size: 0.9rem;
+  }
+
+  .contact {
+    width: 95%;
+  }
+
+  .contacts {
+    width: 95%;
+  }
 }

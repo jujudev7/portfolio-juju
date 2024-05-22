@@ -1,9 +1,9 @@
-import { Section } from "./Section";
 import {
   BookmarkFilledIcon,
   BookmarkIcon,
   CheckCircledIcon,
 } from "@radix-ui/react-icons";
+import { Section } from "./Section";
 
 export const Certifs = () => {
   // Liste de certifications
@@ -23,10 +23,12 @@ export const Certifs = () => {
         id="certifications"
         className="pb-4 flex justify-center items-center h2-hover mx-auto"
       >
-        <span className="oc text-right mr-0">Mes Certifications OpenClassrooms</span>
+        <span className="oc text-right mr-0">
+          <span className="mes">Mes</span> Certifications OpenClassrooms
+        </span>
         {/* <div className="certif-icon text-left"> */}
-          <BookmarkIcon className="w-8 h-8 bookmark-icon" />
-          <BookmarkFilledIcon className="w-8 h-8 bookmark-filled-icon" />
+        <BookmarkIcon className="w-8 h-8 bookmark-icon" />
+        <BookmarkFilledIcon className="w-8 h-8 bookmark-filled-icon" />
         {/* </div> */}
       </h2>
 

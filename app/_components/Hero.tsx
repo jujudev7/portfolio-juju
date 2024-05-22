@@ -1,11 +1,11 @@
-import { Section } from "./Section";
 import Image from "next/image";
+import { Section } from "./Section";
 
 export const Hero = () => {
   return (
     <Section className="heading my-10">
       <div id="about" className="flex-1">
-        <h1>
+        <h1 className="text-center">
           <span className="name">Julien Penna</span>
           <br />
           <i>
@@ -14,17 +14,21 @@ export const Hero = () => {
         </h1>
       </div>
       <div className="card-juju flex">
-        <div className="flex-[2]">
+        <div className="flex-[2] pl-4">
           <p>Salut 👋 moi c&apos;est Julien,</p>
           <p>
             Je suis un développeur front-end français, spécialisé en{" "}
-            <strong className="strong">React.js</strong>. Grâce à mes compétences, je peux intégrer
-            vos maquettes et créer des{" "}
-            <strong className="strong">applications interactives et réactives</strong>.
+            <strong className="strong">React.js</strong>. Grâce à mes
+            compétences, je peux intégrer vos maquettes et créer des{" "}
+            <strong className="strong">
+              applications interactives et réactives
+            </strong>
+            .
           </p>
           <p>
-            Doté d&apos;une <strong className="strong">forte capacité d&apos;adaptation</strong> et
-            d&apos;un désir constant d&apos;apprentissage, je suis prêt à
+            Doté d&apos;une{" "}
+            <strong className="strong">forte capacité d&apos;adaptation</strong>{" "}
+            et d&apos;un désir constant d&apos;apprentissage, je suis prêt à
             relever de nouveaux défis !
           </p>
         </div>
@@ -32,18 +36,20 @@ export const Hero = () => {
           <div className="photo-container rounded-xl">
             <div className="back">
               <p>
-                Basé en <span className="exergue">région parisienne</span>, j&apos;ai
-                vécu quelque temps à Barcelone.
+                Basé en <span className="exergue">région parisienne</span>,
+                j&apos;ai vécu quelque temps à Barcelone.
               </p>
               <p>
                 Je suis beaucoup le sport, surtout le{" "}
-                <span className="exergue">foot</span>. Supporter du PSG, bien avant l&apos;arrivée des Qataris.
+                <span className="exergue">foot</span>. Supporter du PSG, bien
+                avant l&apos;arrivée des Qataris.
               </p>
               <p>
                 Je fais près de <span className="exergue">2 mètres</span>.
               </p>
               <p>
-                J&apos;aime <span className="exergue">l&apos;humour</span>, la raclette, la pâte à tartiner...
+                J&apos;aime <span className="exergue">l&apos;humour</span>, la
+                raclette, la pâte à tartiner...
               </p>
             </div>
             <div className="front">

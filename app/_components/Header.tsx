@@ -1,7 +1,5 @@
-import { Section } from "./Section";
 import Image from "next/image";
 import Link from "next/link";
-import { SwitchLanguage } from "./SwitchLanguage";
 import React, { useEffect } from "react";
 import { ModeToggle } from "./ModeToggle";
 
@@ -33,8 +31,8 @@ export const Header = () => {
   };
 
   return (
-    <div className="header w-full bg-white sticky top-0 z-10">
-      <Section className="zone-menu flex justify-between items-center sticky top-0 z-10 p-2">
+    <div className="header bg-white w-full sticky top-0 pt-2 z-10 max-w-screen-lg mx-auto">
+      <div className="zone-menu flex justify-between items-center sticky top-0 z-10">
         <Link href="/">
           <Image
             src="/j.svg"
@@ -44,7 +42,7 @@ export const Header = () => {
             className="logo w-10 mt-2"
           />
         </Link>
-        <ul className="menu">
+        <ul className="menu flex space-x-8">
           <Link
             className="about-link menu-link"
             href="#about"
@@ -72,13 +70,17 @@ export const Header = () => {
               <div></div>
             </div>
           </Link>
-          <Link className="contact-link menu-link" href="#contact" onClick={handleScroll}>
+          <Link
+            className="contact-link menu-link"
+            href="#contact"
+            onClick={handleScroll}
+          >
             Contact
           </Link>
         </ul>
-        <SwitchLanguage />
+        {/* <SwitchLanguage /> */}
         <ModeToggle />
-      </Section>
+      </div>
     </div>
   );
 };

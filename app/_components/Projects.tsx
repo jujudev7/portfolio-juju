@@ -6,11 +6,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import Image from "next/image";
-import { Section } from "./Section";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowTopRightIcon, LightningBoltIcon } from "@radix-ui/react-icons";
+import Image from "next/image";
+import Link from "next/link";
+import { Section } from "./Section";
 import { LigthingboltFilledIcon } from "./icons/LightingBoltFilledIcon";
 
 export const Projects = () => {
@@ -25,8 +25,8 @@ export const Projects = () => {
           <LightningBoltIcon className="ml-2 mt-1 w-8 h-8 lightingbolt-icon" />
           <LigthingboltFilledIcon className="ml-2 mt-1 w-8 h-8 lightingbolt-filled-icon" />
         </h2>
-        <div className="cards-grid grid gap-8 grid-cols-2">
-          <Card className="card transition transform hover:scale-105 hover:bg-violet-100">
+        <div className="cards-grid mx-auto grid gap-8 grid-cols-2">
+          <Card className="card hover-project hover:scale-105 hover:bg-violet-100">
             <CardHeader>
               <CardTitle className="mb-4">Fisheye 📸</CardTitle>
               <div className="overflow-hidden rounded-md border-2 border-primary">
@@ -53,8 +53,8 @@ export const Projects = () => {
                 leurs meilleurs travaux via un portfolio.
               </p>
               <p>
-                <strong className="strong">Missions :</strong> Créer un site accessible pour une
-                plateforme de photographes.
+                <strong className="strong">Missions :</strong> Créer un site
+                accessible pour une plateforme de photographes.
               </p>
               <p>
                 Récupérer et afficher des données JSON, créer une modale de
@@ -71,7 +71,7 @@ export const Projects = () => {
             </CardFooter>
           </Card>
 
-          <Card className="card transition transform hover:scale-105 hover:bg-violet-100">
+          <Card className="card hover-project hover:scale-105 hover:bg-violet-100">
             <CardHeader>
               <CardTitle className="mb-4">GameOn 🕹️</CardTitle>
               <div className="overflow-hidden relative rounded-md border-2 border-primary">
@@ -98,8 +98,8 @@ export const Projects = () => {
                 jeux vidéo.
               </p>
               <p>
-                <strong className="strong">Missions :</strong> Créer une landing page avec
-                Javascript.
+                <strong className="strong">Missions :</strong> Créer une landing
+                page avec Javascript.
               </p>
               <p>
                 Réaliser un formulaire et gérer la validation des inputs pour
@@ -120,7 +120,7 @@ export const Projects = () => {
             </CardFooter>
           </Card>
 
-          <Card className="card transition transform hover:scale-105 hover:bg-violet-100">
+          <Card className="card hover-project hover:scale-105 hover:bg-violet-100">
             <CardHeader>
               <CardTitle className="mb-4">Ohmyfood 🍽️</CardTitle>
               <div className="overflow-hidden rounded-md border-2 border-primary">
@@ -143,12 +143,12 @@ export const Projects = () => {
             <CardContent>
               <p>
                 <span className="text-primary font-bold">Ohmyfood!</span> est
-                une jeune startup qui voudrait s&apos;imposer sur le marché de la
-                restauration et la commande de repas en ligne.
+                une jeune startup qui voudrait s&apos;imposer sur le marché de
+                la restauration et la commande de repas en ligne.
               </p>
               <p>
-                <strong className="strong">Missions : </strong>Dynamiser des pages web avec des
-                animations CSS, utilisation de Sass.
+                <strong className="strong">Missions : </strong>Dynamiser des
+                pages web avec des animations CSS, utilisation de Sass.
               </p>
               <p>
                 Développer un site “mobile first” qui répertorie les menus de
@@ -165,7 +165,7 @@ export const Projects = () => {
               </Link>
             </CardFooter>
           </Card>
-          <Card className="card transition transform hover:scale-105 hover:bg-violet-100">
+          <Card className="card hover-project hover:scale-105 hover:bg-violet-100">
             <CardHeader>
               <CardTitle className="mb-4">Booki 🏨</CardTitle>
               <div className="overflow-hidden rounded-md border-2 border-primary">
@@ -190,8 +190,8 @@ export const Projects = () => {
                 activités dans la ville de leur choix.
               </p>
               <p>
-                <strong className="strong">Missions : </strong>Transformer une maquette Figma en
-                site web avec HTML & CSS.
+                <strong className="strong">Missions : </strong>Transformer une
+                maquette Figma en site web avec HTML & CSS.
               </p>
               <p>Développer une interface responsive.</p>
             </CardContent>

@@ -9,7 +9,7 @@ export const Hero = () => {
           <span className="name">Julien Penna</span>
           <br />
           <i>
-            <span className="job">Front-end Developer React JS</span>
+            <span className="job">Développeur Front-end React JS</span>
           </i>
         </h1>
       </div>

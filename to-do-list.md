@@ -10,6 +10,7 @@
 ❌ ajouter particlues ou autre effet visuel en bg
 ❌ ajouter des spéarateurs entre les sections
 
+✅ responsive design
 ✅ contact récupérer les messages
 ✅ changer la photo
 ✅ gérer le flip

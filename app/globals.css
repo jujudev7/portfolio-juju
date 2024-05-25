@@ -812,6 +812,10 @@ img {
     padding: 0 10px;
   }
 
+  .menu-link:hover div {
+    padding-left: 0.33rem;
+  }
+
   .logo {
     width: 28px;
     margin-left: 2px;
@@ -912,6 +916,22 @@ img {
   .logo {
     margin-left: 2px;
     margin-right: 2px;
+    width: 24px;
+    min-width: 24px;
+  }
+
+  .menu-link {
+    padding: 0.15rem 0.05rem;
+    font-size: 0.6rem;
+    width: 60px;
+  }
+
+  .menu > .menu-link + .menu-link {
+    margin-left: 3px;
+  }
+
+  .mode-btn {
+    transform: scale(0.7);
   }
 
   .heading {

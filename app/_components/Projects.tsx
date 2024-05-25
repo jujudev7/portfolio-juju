@@ -54,7 +54,7 @@ export const Projects = () => {
               </p>
               <p>
                 <strong className="strong">Missions :</strong> Créer un site
-                accessible pour une plateforme de photographes.
+                accessible pour une plateforme de photographes en Javascript.
               </p>
               <p>
                 Récupérer et afficher des données JSON, créer une modale de

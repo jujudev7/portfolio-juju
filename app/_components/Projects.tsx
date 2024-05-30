@@ -21,7 +21,7 @@ export const Projects = () => {
           id="projects"
           className="mb-10 text-center justify-center flex items-center h2-hover"
         >
-          <span>Projects</span>
+          <span>Projets</span>
           <LightningBoltIcon className="ml-2 mt-1 w-8 h-8 lightingbolt-icon" />
           <LigthingboltFilledIcon className="ml-2 mt-1 w-8 h-8 lightingbolt-filled-icon" />
         </h2>

@@ -8,13 +8,15 @@ import { Section } from "./Section";
 export const Certifs = () => {
   // Liste de certifications
   const certifications = [
-    { id: 1, name: "Créez des pages web dynamiques avec JavaScript" },
-    { id: 2, name: "Apprenez à programmer avec JavaScript" },
-    { id: 3, name: "Découvrez le fonctionnement des algorithmes" },
+    { id: 1, name: "Gérez du code avec Git et GitHub" },
+    { id: 2, name: "Créez votre site web avec HTML5 et CSS3" },
+    { id: 3, name: "Concevez un contenu web accessible" },
     { id: 4, name: "Créez des animations CSS modernes" },
-    { id: 5, name: "Concevez un contenu web accessible" },
-    { id: 6, name: "Créez votre site web avec HTML5 et CSS3" },
-    { id: 7, name: "Gérez du code avec Git et GitHub" },
+    { id: 5, name: "Découvrez le fonctionnement des algorithmes" },
+    { id: 6, name: "Apprenez à programmer avec JavaScript" },
+    { id: 7, name: "Créez des pages web dynamiques avec JavaScript" },
+    { id: 8, name: "Débutez avec React" },
+    { id: 9, name: "Créez une application React complète" },
   ];
 
   return (

@@ -1,18 +1,20 @@
 // Home.tsx
 "use client";
 
+import { HeartFilledIcon } from "@radix-ui/react-icons";
+import { Certifs } from "./_components/Certifs";
+import { Contact } from "./_components/Contact";
 import { Header } from "./_components/Header";
 import { Hero } from "./_components/Hero";
-import { Certifs } from "./_components/Certifs";
 import { Projects } from "./_components/Projects";
-import { Contact } from "./_components/Contact";
-import { HeartFilledIcon } from "@radix-ui/react-icons";
+import Stack from "./_components/Stack";
 
 export default function Home() {
   return (
     <body>
       <Header />
       <Hero />
+      <Stack />
       <Projects />
       <Certifs />
       <Contact />

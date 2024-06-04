@@ -7,9 +7,10 @@
 ❌ créer un switch FR/EN
 ❌ tout traduire
 
-❌ ajouter particlues ou autre effet visuel en bg
-❌ ajouter des spéarateurs entre les sections
+❌ ajouter particules ou autre effet visuel en bg
+❌ ajouter des séparateurs entre les sections
 
+✅ ajouter Stack
 ✅ responsive design
 ✅ contact récupérer les messages
 ✅ changer la photo

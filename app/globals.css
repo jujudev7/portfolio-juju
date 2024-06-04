@@ -109,7 +109,7 @@ h3 {
 
 .track {
   display: flex;
-  animation: scroll 15s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 .item {

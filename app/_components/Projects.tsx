@@ -30,10 +30,7 @@ export const Projects = () => {
             <CardHeader>
               <CardTitle className="mb-4">Fisheye 📸</CardTitle>
               <div className="overflow-hidden rounded-md border-2 border-primary">
-                <Link
-                  href="https://jujudev7.github.io/FishEye/"
-                  target="_blank"
-                >
+                <Link href="https://fisheye.julienpenna.com" target="_blank">
                   <Image
                     alt="Fisheye, le site internet"
                     loading="lazy"
@@ -62,7 +59,7 @@ export const Projects = () => {
               </p>
             </CardContent>
             <CardFooter className="flex justify-end">
-              <Link href="https://jujudev7.github.io/FishEye/" target="_blank">
+              <Link href="https://fisheye.julienpenna.com" target="_blank">
                 <Button className="ml-auto group hover:bg-gray-900 see-more">
                   Voir le site{" "}
                   <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />
@@ -75,10 +72,7 @@ export const Projects = () => {
             <CardHeader>
               <CardTitle className="mb-4">GameOn 🕹️</CardTitle>
               <div className="overflow-hidden relative rounded-md border-2 border-primary">
-                <Link
-                  href="https://jujudev7.github.io/GameOn-website-FR/"
-                  target="_blank"
-                >
+                <Link href="https://gameon.julienpenna.com" target="_blank">
                   <Image
                     alt="GameOn, le site internet"
                     loading="lazy"
@@ -108,10 +102,7 @@ export const Projects = () => {
               </p>
             </CardContent>
             <CardFooter className="flex justify-end">
-              <Link
-                href="https://jujudev7.github.io/GameOn-website-FR/"
-                target="_blank"
-              >
+              <Link href="https://gameon.julienpenna.com" target="_blank">
                 <Button className="ml-auto group hover:bg-gray-900 see-more">
                   Voir le site{" "}
                   <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />
@@ -124,10 +115,7 @@ export const Projects = () => {
             <CardHeader>
               <CardTitle className="mb-4">Ohmyfood 🍽️</CardTitle>
               <div className="overflow-hidden rounded-md border-2 border-primary">
-                <Link
-                  href="https://jujudev7.github.io/ohmyfood/"
-                  target="_blank"
-                >
+                <Link href="https://ohmyfood.julienpenna.com" target="_blank">
                   <Image
                     alt="Ohmyfood, le site internet"
                     loading="lazy"
@@ -157,7 +145,7 @@ export const Projects = () => {
             </CardContent>
 
             <CardFooter className="flex justify-end">
-              <Link href="https://jujudev7.github.io/ohmyfood/" target="_blank">
+              <Link href="https://ohmyfood.julienpenna.com" target="_blank">
                 <Button className="ml-auto group hover:bg-gray-900 see-more">
                   Voir le site{" "}
                   <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />
@@ -169,7 +157,7 @@ export const Projects = () => {
             <CardHeader>
               <CardTitle className="mb-4">Booki 🏨</CardTitle>
               <div className="overflow-hidden rounded-md border-2 border-primary">
-                <Link href="https://jujudev7.github.io/booki/" target="_blank">
+                <Link href="https://booki.julienpenna.com" target="_blank">
                   <Image
                     alt="Booki, le site Internet"
                     loading="lazy"
@@ -196,7 +184,7 @@ export const Projects = () => {
               <p>Développer une interface responsive.</p>
             </CardContent>
             <CardFooter className="flex justify-end">
-              <Link href="https://jujudev7.github.io/booki/" target="_blank">
+              <Link href="https://booki.julienpenna.com" target="_blank">
                 <Button className="ml-auto group hover:bg-gray-900 see-more">
                   Voir le site{" "}
                   <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />

@@ -100,6 +100,10 @@ h3 {
 
 /* STACK  */
 
+.dark .nextjs {
+  filter: invert(100%);
+}
+
 .scroller {
   overflow: hidden;
   white-space: nowrap;

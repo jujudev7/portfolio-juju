@@ -64,13 +64,16 @@ export const Contact = () => {
       console.log("Soumission du formulaire en cours");
 
       // Appel de l'API avec les données du formulaire
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`, {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/submit-form`,
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (response.ok) {
         setSubmitStatus("Formulaire soumis avec succès");

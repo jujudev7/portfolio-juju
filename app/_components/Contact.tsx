@@ -1,13 +1,10 @@
 "use client";
-
+import { zodResolver } from "@hookform/resolvers/zod";
 import {
   EnvelopeClosedIcon,
   EnvelopeOpenIcon,
   RocketIcon,
 } from "@radix-ui/react-icons";
-import { Section } from "./Section";
-
-import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -20,16 +17,17 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-
 import { Input } from "@/components/ui/input";
-import Image from "next/image";
+import { Textarea } from "@/components/ui/textarea";
 
 import { Card } from "@/components/ui/card";
-import { Textarea } from "@/components/ui/textarea";
+import Image from "next/image";
 import Link from "next/link";
 import { GithubIcon } from "./icons/GithubIcon";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
+import { Section } from "./Section";
 
+// Schéma de validation du formulaire avec Zod
 const FormSchema = z.object({
   name: z.string().min(2, {
     message: "* Votre nom doit contenir au moins 2 caractères.",
@@ -45,50 +43,6 @@ const FormSchema = z.object({
   }),
 });
 
-// export const Contact = () => {
-//   const form = useForm<z.infer<typeof FormSchema>>({
-//     resolver: zodResolver(FormSchema),
-//     defaultValues: {
-//       name: "",
-//       subject: "",
-//       message: "",
-//       email: "",
-//     },
-//   });
-//   // console.log("Avant la soumission du formulaire");
-//   // function onSubmit(data: z.infer<typeof FormSchema>) {
-//   //   console.log("Soumission du formulaire en cours");
-//   //   console.log("Données soumises :", data);
-//   // }
-
-//   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
-//     try {
-//       console.log("Soumission du formulaire en cours");
-
-//       // Appel de l'API avec les données du formulaire
-//       const response = await fetch("/api/send", {
-//         method: "POST",
-//         body: JSON.stringify(data),
-//         headers: {
-//           'Content-Type': 'application/json',
-//         }
-//       });
-
-//       if (response.ok) {
-//         // Succès, réinitialiser le formulaire
-//         console.log("Données soumises :", data);
-//         console.log("email success");
-//         form.reset();
-//         // Afficher un message de réussite ou rediriger l'utilisateur
-//       } else {
-//         // Afficher un message d'erreur
-//         console.log("email ERROR !");
-//       }
-//     } catch (error) {
-//       // Gérer les erreurs de l'API
-//     }
-//   };
-
 export const Contact = () => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -100,29 +54,31 @@ export const Contact = () => {
     },
   });
 
-  // const onSubmit = async (data: z.infer<typeof FormSchema>) => {
-  //   try {
-  //     console.log("Soumission du formulaire en cours");
+  // Fonction de soumission du formulaire
+  const onSubmit = async (data: z.infer<typeof FormSchema>) => {
+    try {
+      console.log("Soumission du formulaire en cours");
 
-  //     const response = await fetch("/api/send", {
-  //       method: "POST",
-  //       body: JSON.stringify(data),
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //     });
+      // Appel de l'API avec les données du formulaire
+      const response = await fetch("/api/submit-form", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-  //     if (response.ok) {
-  //       console.log("Données soumises :", data);
-  //       console.log("email success");
-  //       form.reset();
-  //     } else {
-  //       console.log("email ERROR !");
-  //     }
-  //   } catch (error) {
-  //     console.log("API error", error);
-  //   }
-  // };
+      if (response.ok) {
+        console.log("Données soumises :", data);
+        console.log("email success");
+        form.reset(); // Réinitialiser le formulaire
+      } else {
+        console.log("Erreur lors de la soumission !");
+      }
+    } catch (error) {
+      console.log("Erreur lors de l'appel à l'API :", error);
+    }
+  };
 
   return (
     <Section className="section-contact flex flex-col items-center justify-center mt-10">
@@ -135,12 +91,11 @@ export const Contact = () => {
           <EnvelopeOpenIcon className="ml-4 mt-1 w-8 h-8 envelope-open-icon" />
           <EnvelopeClosedIcon className="ml-4 mt-1 w-8 h-8 envelope-closed-icon" />
         </h2>
+
+        {/* Utilisation du hook form pour gérer le formulaire */}
         <Form {...form}>
           <form
-            method="post"
-            action="mail.php"
-            onSubmit={() => console.log("Votre message a bien été envoyé !")}
-            // onSubmit={form.handleSubmit(onSubmit)}
+            onSubmit={form.handleSubmit(onSubmit)} // Utiliser handleSubmit
             className="w-2/3 space-y-4 mx-auto md:w-3/4 lg:w-3/4"
           >
             <div className="flex flex-col md:flex-row md:space-x-4 w-full">
@@ -179,6 +134,7 @@ export const Contact = () => {
                 </FormItem>
               )}
             />
+
             <FormField
               control={form.control}
               name="subject"
@@ -196,6 +152,7 @@ export const Contact = () => {
                 </FormItem>
               )}
             />
+
             <FormField
               control={form.control}
               name="message"
@@ -224,6 +181,7 @@ export const Contact = () => {
           </form>
         </Form>
       </Card>
+
       <div className="contacts flex items-center w-2/3 gap-4 mb-40">
         <Link
           href="mailto:penna.julien@gmail.com"
@@ -240,7 +198,6 @@ export const Contact = () => {
             />
           </Card>
         </Link>
-
         <Link
           href="https://www.linkedin.com/in/dev-web-front-end-julien-penna/"
           target="_blank"
@@ -259,7 +216,7 @@ export const Contact = () => {
           target="_blank"
           className="github-link flex-grow"
         >
-          <Card className="card-github bg-violet-600 hover:bg-black hover:border-white flex justify-center h-20 h-20 pl-7 pr-7">
+          <Card className="card-github bg-violet-600 hover:bg-black hover:border-white flex justify-center h-20 pl-7 pr-7">
             <GithubIcon
               size={32}
               className="github-icon m-6"
@@ -271,6 +228,3 @@ export const Contact = () => {
     </Section>
   );
 };
-// function useState(arg0: boolean): [any, any] {
-//   throw new Error("Function not implemented.");
-// }

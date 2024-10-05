@@ -26,6 +26,47 @@ export const Projects = () => {
           <LigthingboltFilledIcon className="ml-2 mt-1 w-8 h-8 lightingbolt-filled-icon" />
         </h2>
         <div className="cards-grid mx-auto grid gap-8 grid-cols-2">
+          {/* <Card className="card hover-project hover:scale-105 hover:bg-violet-100">
+            <CardHeader>
+              <CardTitle className="mb-4">ShopMe 🛍️</CardTitle>
+              <div className="overflow-hidden rounded-md border-2 border-primary">
+                <Link href="https://e-commerce.julienpenna.com" target="_blank">
+                  <Image
+                    alt="ShopMe, site e-commerce"
+                    loading="lazy"
+                    width="600"
+                    height="400"
+                    decoding="async"
+                    className="h-auto transition-all scale-101 rounded-none hover:scale-110"
+                    src="/fisheye.gif"
+                  />
+                </Link>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p>
+                <span className="text-primary font-bold">ShopMe</span> est un
+                site e-commerce de vêtements.
+              </p>
+              <p>
+                <strong className="strong">Missions :</strong> Réaliser un site
+                Internet pour une boutique en ligne grâce à React et Javascript.
+                Afficher les produits, gérer le panier et la connexion.
+              </p>
+              <p>
+                Gestion de la base de données hébergée sur le Cloud de MongoDB.
+              </p>
+            </CardContent>
+            <CardFooter className="flex justify-end">
+              <Link href="https://e-commerce.julienpenna.com" target="_blank">
+                <Button className="ml-auto group hover:bg-gray-900 see-more">
+                  Voir le site{" "}
+                  <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />
+                </Button>
+              </Link>
+            </CardFooter>
+          </Card> */}
+
           <Card className="card hover-project hover:scale-105 hover:bg-violet-100">
             <CardHeader>
               <CardTitle className="mb-4">Fisheye 📸</CardTitle>

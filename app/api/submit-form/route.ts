@@ -2,14 +2,15 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+// Headers CORS
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*", // Autorise toutes les origines
+  "Access-Control-Allow-Origin": "*", // Autorise toutes les origines (tu peux spécifier 'http://localhost:3000' pour plus de sécurité)
   "Access-Control-Allow-Methods": "GET, POST, OPTIONS", // Autorise les méthodes GET, POST, OPTIONS
-  "Access-Control-Allow-Headers": "Content-Type",
+  "Access-Control-Allow-Headers": "Content-Type", // Autorise le header Content-Type
 };
 
+// Fonction pour gérer les requêtes OPTIONS (préflight)
 export async function OPTIONS() {
-  // Répondre aux requêtes OPTIONS pour CORS
   return NextResponse.json({}, { status: 200, headers: corsHeaders });
 }
 
@@ -39,12 +40,16 @@ export async function POST(request: Request) {
     console.log("Envoi du mail en cours...");
     await transporter.sendMail(mailOptions);
     console.log("E-mail envoyé avec succès !");
+
+    // Applique les headers CORS à la réponse POST
     return NextResponse.json(
       { message: "Formulaire soumis avec succès" },
-      { headers: corsHeaders }
+      { status: 200, headers: corsHeaders }
     );
   } catch (error) {
     console.error("Erreur lors de l'envoi de l'e-mail :", error);
+
+    // Applique aussi les headers CORS en cas d'erreur
     return NextResponse.json(
       { message: "Erreur lors de l'envoi de l'e-mail" },
       { status: 500, headers: corsHeaders }

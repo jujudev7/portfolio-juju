@@ -2,16 +2,16 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "http://localhost:3000",
-  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type",
-};
+// const corsHeaders = {
+//   "Access-Control-Allow-Origin": "http://localhost:3000",
+//   "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+//   "Access-Control-Allow-Headers": "Content-Type",
+// };
 
-export async function OPTIONS() {
-  // Répondre aux requêtes OPTIONS
-  return NextResponse.json({}, { status: 200, headers: corsHeaders });
-}
+// export async function OPTIONS() {
+//   // Répondre aux requêtes OPTIONS
+//   return NextResponse.json({}, { status: 200, headers: corsHeaders });
+// }
 
 export async function POST(request: Request) {
   const body = await request.json();
@@ -39,14 +39,14 @@ export async function POST(request: Request) {
     await transporter.sendMail(mailOptions);
     console.log("E-mail envoyé avec succès !");
     return NextResponse.json(
-      { message: "Formulaire soumis avec succès" },
-      { headers: corsHeaders }
+      { message: "Formulaire soumis avec succès" }
+      // { headers: corsHeaders }
     );
   } catch (error) {
     console.error("Erreur lors de l'envoi de l'e-mail :", error);
     return NextResponse.json(
-      { message: "Erreur lors de l'envoi de l'e-mail" },
-      { status: 500, headers: corsHeaders }
+      { message: "Erreur lors de l'envoi de l'e-mail" }
+      // { status: 500, headers: corsHeaders }
     );
   }
 }

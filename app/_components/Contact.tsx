@@ -58,17 +58,24 @@ export const Contact = () => {
   const [submitStatus, setSubmitStatus] = useState<string | null>(null);
 
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
+    console.log("API URL ENV:", process.env.NEXT_PUBLIC_API_URL);
+    // console.log("API URL envLOCAL", process.env.local.NEXT_PUBLIC_API_URL);
+
     try {
       console.log("Soumission du formulaire en cours");
 
       // Appel de l'API avec les données du formulaire
-      const response = await fetch(`${process.env.local.NEXT_PUBLIC_API_URL}`, {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`, {
+      const response = await fetch(
+        "https://portfolio-juju-ochre.vercel.app/api/submit-form",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (response.ok) {
         setSubmitStatus("Formulaire soumis avec succès");

@@ -2,7 +2,29 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+// Middleware CORS
+export function applyCORS(req: Request) {
+  const allowedOrigins = ["https://julienpenna.com"]; // Remplacez par votre domaine
+  const origin = req.headers.get("origin");
+
+  if (allowedOrigins.includes(origin as string)) {
+    const response = NextResponse.next();
+    response.headers.append("Access-Control-Allow-Origin", origin);
+    response.headers.append("Access-Control-Allow-Methods", "POST");
+    response.headers.append("Access-Control-Allow-Headers", "Content-Type");
+    return response;
+  }
+
+  return NextResponse.next();
+}
+
 export async function POST(request: Request) {
+  // Appliquer le middleware CORS
+  const corsResponse = applyCORS(request);
+  if (corsResponse) {
+    return corsResponse; // Retourne la réponse modifiée si CORS est appliqué
+  }
+
   const body = await request.json();
 
   // Extraire les données du formulaire

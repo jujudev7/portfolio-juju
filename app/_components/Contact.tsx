@@ -1,13 +1,4 @@
 "use client";
-import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  EnvelopeClosedIcon,
-  EnvelopeOpenIcon,
-  RocketIcon,
-} from "@radix-ui/react-icons";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -19,6 +10,15 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  EnvelopeClosedIcon,
+  EnvelopeOpenIcon,
+  RocketIcon,
+} from "@radix-ui/react-icons";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
@@ -55,6 +55,8 @@ export const Contact = () => {
   });
 
   // Fonction de soumission du formulaire
+  const [submitStatus, setSubmitStatus] = useState<string | null>(null);
+
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
     try {
       console.log("Soumission du formulaire en cours");
@@ -69,13 +71,15 @@ export const Contact = () => {
       });
 
       if (response.ok) {
+        setSubmitStatus("Formulaire soumis avec succès");
         console.log("Données soumises :", data);
-        console.log("email success");
-        form.reset(); // Réinitialiser le formulaire
+        form.reset();
       } else {
+        setSubmitStatus("Erreur lors de la soumission");
         console.log("Erreur lors de la soumission !");
       }
     } catch (error) {
+      setSubmitStatus("Erreur lors de l'appel à l'API");
       console.log("Erreur lors de l'appel à l'API :", error);
     }
   };

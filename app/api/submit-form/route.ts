@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+export const runtime = "edge";
+
 // Headers CORS avec domaine spécifique
 const corsHeaders = {
   "Access-Control-Allow-Origin": "https://julienpenna.com", // Remplacez par votre domaine Hostinger

@@ -18,6 +18,7 @@ import {
 } from "@radix-ui/react-icons";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 import { Card } from "@/components/ui/card";
@@ -44,6 +45,8 @@ const FormSchema = z.object({
 });
 
 export const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -54,37 +57,42 @@ export const Contact = () => {
     },
   });
 
-  // Fonction de soumission du formulaire
-  const [submitStatus, setSubmitStatus] = useState<string | null>(null);
-
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
-    console.log("API URL ENV:", process.env.NEXT_PUBLIC_API_URL);
-
+    setIsSubmitting(true);
     try {
-      console.log("Soumission du formulaire en cours");
-      // Appel de l'API avec les données du formulaire
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/submit-form`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+      console.log("Tentative d'envoi à:", `${apiUrl}/api/submit-form`);
 
-      if (response.ok) {
-        setSubmitStatus("Formulaire soumis avec succès");
-        console.log("Données soumises :", data);
-        form.reset();
-      } else {
-        setSubmitStatus("Erreur lors de la soumission");
-        console.log("Erreur lors de la soumission !");
+      const response = await fetch(`${apiUrl}/api/submit-form`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+        cache: "no-cache",
+      });
+
+      console.log("Statut de la réponse:", response.status);
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => null);
+        console.error("Erreur détaillée:", errorData);
+        throw new Error(
+          `Erreur ${response.status}: ${
+            errorData?.message || response.statusText
+          }`
+        );
       }
+
+      const result = await response.json();
+      toast.success("Message envoyé avec succès !");
+      form.reset();
     } catch (error) {
-      setSubmitStatus("Erreur lors de l'appel à l'API");
-      console.log("Erreur lors de l'appel à l'API :", error);
+      console.error("Erreur lors de l'envoi:", error);
+      toast.error("Erreur lors de l'envoi du message. Veuillez réessayer.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -95,15 +103,14 @@ export const Contact = () => {
           id="contact"
           className="mt-8 mb-4 text-white flex justify-center items-center h2-hover"
         >
-          <span>Contact</span>{" "}
+          <span>Contact</span>
           <EnvelopeOpenIcon className="ml-4 mt-1 w-8 h-8 envelope-open-icon" />
           <EnvelopeClosedIcon className="ml-4 mt-1 w-8 h-8 envelope-closed-icon" />
         </h2>
 
-        {/* Utilisation du hook form pour gérer le formulaire */}
         <Form {...form}>
           <form
-            onSubmit={form.handleSubmit(onSubmit)} // Utiliser handleSubmit
+            onSubmit={form.handleSubmit(onSubmit)}
             className="w-2/3 space-y-4 mx-auto md:w-3/4 lg:w-3/4"
           >
             <div className="flex flex-col md:flex-row md:space-x-4 w-full">
@@ -181,10 +188,17 @@ export const Contact = () => {
 
             <Button
               type="submit"
-              className="submit p-6 text-lg bg-white text-primary hover:bg-gray-900 hover:text-white group"
+              disabled={isSubmitting}
+              className="submit p-6 text-lg bg-white text-primary hover:bg-gray-900 hover:text-white group disabled:opacity-50"
             >
-              Envoyer
-              <RocketIcon className="ml-3 h-4 w-4 mt-1 group-hover:translate-x-2 group-hover:-translate-y-2" />
+              {isSubmitting ? (
+                "Envoi en cours..."
+              ) : (
+                <>
+                  Envoyer
+                  <RocketIcon className="ml-3 h-4 w-4 mt-1 group-hover:translate-x-2 group-hover:-translate-y-2" />
+                </>
+              )}
             </Button>
           </form>
         </Form>

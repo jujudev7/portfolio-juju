@@ -62,16 +62,15 @@ export const Contact = () => {
 
     try {
       console.log("Soumission du formulaire en cours");
-
       // Appel de l'API avec les données du formulaire
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_API_URL}/api/submit-form`,
         {
           method: "POST",
-          body: JSON.stringify(data),
           headers: {
             "Content-Type": "application/json",
           },
+          body: JSON.stringify(formData),
         }
       );
 

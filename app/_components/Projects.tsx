@@ -39,6 +39,7 @@ export const Projects = () => {
                     decoding="async"
                     className="h-auto transition-all scale-101 rounded-none hover:scale-110"
                     src="/fisheye.gif"
+                    unoptimized 
                   />
                 </Link>
               </div>
@@ -80,6 +81,7 @@ export const Projects = () => {
                     decoding="async"
                     className="h-auto transition-all scale-101 rounded-none hover:scale-110"
                     src="/fisheye.gif"
+                    unoptimized
                   />
                 </Link>
               </div>
@@ -122,6 +124,7 @@ export const Projects = () => {
                     decoding="async"
                     className="h-auto object-cover transition-all rounded-none hover:scale-110"
                     src="/gameon.gif"
+                    unoptimized
                   />
                 </Link>
               </div>
@@ -165,6 +168,7 @@ export const Projects = () => {
                     decoding="async"
                     className="h-auto object-cover transition-all rounded-none hover:scale-110"
                     src="/ohmyfood.gif"
+                    unoptimized
                   />
                 </Link>
               </div>
@@ -207,6 +211,7 @@ export const Projects = () => {
                     decoding="async"
                     className="h-auto object-cover transition-all rounded-none hover:scale-110"
                     src="/booki.gif"
+                    unoptimized
                   />
                 </Link>
               </div>

@@ -55,7 +55,7 @@ export const Hero = () => {
             <div className="front">
               <div className="image">
                 <Image
-                  src="jujudev7.jpg"
+                  src="/jujudev7.jpg"
                   width={360}
                   height={240}
                   alt="portrait Julien Penna"

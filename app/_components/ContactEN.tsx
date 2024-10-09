@@ -1,11 +1,11 @@
 "use client";
 
-import { Section } from "./Section";
 import {
   EnvelopeClosedIcon,
   EnvelopeOpenIcon,
   RocketIcon,
 } from "@radix-ui/react-icons";
+import { Section } from "./Section";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -21,14 +21,14 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
-import Image from "next/image";
 import { Input } from "@/components/ui/input";
+import Image from "next/image";
 // import { toast } from "@/components/ui/use-toast";
-import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
+import Link from "next/link";
 import { GithubIcon } from "./icons/GithubIcon";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
-import Link from "next/link";
 
 export function InputDemo() {
   return <Input className="bg-white" type="email" placeholder="Email" />;
@@ -203,7 +203,7 @@ export const ContactEN = () => {
           target="_blank"
           className="flex-grow"
         >
-          <Card className="card-github bg-violet-600 hover:bg-black hover:border-white flex justify-center h-20 h-20 pl-7 pr-7">
+          <Card className="card-github bg-violet-600 hover:bg-black hover:border-white flex justify-center h-20 pl-7 pr-7">
             <GithubIcon
               size={32}
               className="github-icon m-6"

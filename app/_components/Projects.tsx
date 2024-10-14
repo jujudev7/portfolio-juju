@@ -50,7 +50,7 @@ export const Projects = () => {
                 site e-commerce de vêtements.
               </p>
               <p>
-                <strong className="strong">Missions :</strong> Réaliser un site
+                <span className="font-bold">Missions :</span> Réaliser un site
                 Internet pour une boutique en ligne grâce à React et Javascript.
                 Afficher les produits, gérer le panier et la connexion.
               </p>
@@ -93,7 +93,7 @@ export const Projects = () => {
                 leurs meilleurs travaux via un portfolio.
               </p>
               <p>
-                <strong className="strong">Missions :</strong> Créer un site
+                <span className="font-bold">Missions :</span> Créer un site
                 accessible pour une plateforme de photographes en Javascript.
               </p>
               <p>
@@ -136,7 +136,7 @@ export const Projects = () => {
                 jeux vidéo.
               </p>
               <p>
-                <strong className="strong">Missions :</strong> Créer une landing
+                <span className="font-bold">Missions :</span> Créer une landing
                 page avec Javascript.
               </p>
               <p>
@@ -180,7 +180,7 @@ export const Projects = () => {
                 la restauration et la commande de repas en ligne.
               </p>
               <p>
-                <strong className="strong">Missions : </strong>Dynamiser des
+                <span className="font-bold">Missions : </span>Dynamiser des
                 pages web avec des animations CSS, utilisation de Sass.
               </p>
               <p>
@@ -224,7 +224,7 @@ export const Projects = () => {
                 activités dans la ville de leur choix.
               </p>
               <p>
-                <strong className="strong">Missions : </strong>Transformer une
+                <span className="font-bold">Missions : </span>Transformer une
                 maquette Figma en site web avec HTML & CSS.
               </p>
               <p>Développer une interface responsive.</p>

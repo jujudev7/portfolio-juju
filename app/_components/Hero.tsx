@@ -14,20 +14,25 @@ export const Hero = () => {
         </h1>
       </div>
       <div className="card-juju flex">
-        <div className="flex-[2] pl-4">
+        <div className="flex-[2] pl-4 mr-2">
           <p>Salut 👋 moi c&apos;est Julien,</p>
           <p>
             Je suis un développeur front-end français, spécialisé en{" "}
-            <strong className="strong">React.js</strong>. Grâce à mes
-            compétences, je peux intégrer vos maquettes et créer des{" "}
-            <strong className="strong">
-              applications interactives et réactives
-            </strong>
-            .
+            <span className="font-bold">React.js</span>,{" "}
+            <span className="font-bold">Next.js</span>,{" "}
+            <span className="font-bold">TypeScript</span> et{" "}
+            <span className="font-bold">Tailwind CSS</span>.
+          </p>{" "}
+          <p>
+            Grâce à mes compétences, je vous aide à intégrer vos maquettes et à
+            créer des{" "}
+            <span className="font-bold">applications interactives</span>,{" "}
+            <span className="font-bold">réactives</span> et{" "}
+            <span className="font-bold">responsive</span>.
           </p>
           <p>
             Doté d&apos;une{" "}
-            <strong className="strong">forte capacité d&apos;adaptation</strong>{" "}
+            <span className="font-bold">forte capacité d&apos;adaptation</span>{" "}
             et d&apos;un désir constant d&apos;apprentissage, je suis prêt à
             relever de nouveaux défis !
           </p>
@@ -55,7 +60,7 @@ export const Hero = () => {
             <div className="front">
               <div className="image">
                 <Image
-                  src="/jujudev7.jpg"
+                  src="/julien-penna.jpg"
                   width={360}
                   height={240}
                   alt="portrait Julien Penna"

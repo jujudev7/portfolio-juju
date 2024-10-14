@@ -169,7 +169,7 @@ h3 {
 .menu-link {
   font-family: var(--poppins);
   font-size: 1rem;
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0.9rem;
   text-transform: uppercase;
   border: 1.75px solid #7c3aed;
   border-radius: 20px;
@@ -426,6 +426,7 @@ img {
 .dark .strong {
   color: #6ee7b7;
 }
+
 /* style the maincontainer class with all child div's of class .front */
 .photo-container > .front {
   position: absolute;
@@ -674,7 +675,7 @@ img {
 @media screen and (max-width: 769px) {
   .menu-link {
     padding: 0.25rem 0.5rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     width: 90px;
   }
 

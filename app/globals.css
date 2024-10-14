@@ -71,6 +71,13 @@ body {
 
 .logo {
   padding-bottom: 7px;
+  max-height: 60px;
+  max-width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(10deg);
 }
 
 h1 {
@@ -119,11 +126,6 @@ h3 {
 .item {
   display: inline-block;
   padding: 0 3%;
-}
-
-.logo {
-  max-height: 60px;
-  max-width: 100px;
 }
 
 /* Animation */

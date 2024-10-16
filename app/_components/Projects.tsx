@@ -115,6 +115,48 @@ export const Projects = () => {
 
           <Card className="card hover-project hover:scale-105 hover:bg-violet-100">
             <CardHeader>
+              <CardTitle className="mb-4">Fisheye 📸</CardTitle>
+              <div className="overflow-hidden rounded-md border-2 border-primary">
+                <Link href="https://fisheye.julienpenna.com" target="_blank">
+                  <Image
+                    alt="Fisheye, le site internet"
+                    loading="lazy"
+                    width="600"
+                    height="400"
+                    decoding="async"
+                    className="h-auto transition-all scale-101 rounded-none hover:scale-110"
+                    src="/fisheye.gif"
+                  />
+                </Link>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p>
+                <span className="text-primary font-bold">Fisheye</span> est un
+                site web qui permet aux photographes indépendants de présenter
+                leurs meilleurs travaux via un portfolio.
+              </p>
+              <p>
+                <strong className="strong">Missions :</strong> Créer un site
+                accessible pour une plateforme de photographes en Javascript.
+              </p>
+              <p>
+                Récupérer et afficher des données JSON, créer une modale de
+                contact, une LightBox pour les médias et gérer les likes.
+              </p>
+            </CardContent>
+            <CardFooter className="flex justify-end">
+              <Link href="https://fisheye.julienpenna.com" target="_blank">
+                <Button className="ml-auto group hover:bg-gray-900 see-more">
+                  Voir le site{" "}
+                  <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />
+                </Button>
+              </Link>
+            </CardFooter>
+          </Card>
+
+          <Card className="card hover-project hover:scale-105 hover:bg-violet-100">
+            <CardHeader>
               <CardTitle className="mb-4">GameOn 🕹️</CardTitle>
               <div className="overflow-hidden relative rounded-md border-2 border-primary">
                 <Link href="https://gameon.julienpenna.com" target="_blank">

@@ -70,17 +70,17 @@ export const Projects = () => {
 
           <Card className="card hover-project hover:scale-105 hover:bg-violet-100">
             <CardHeader>
-              <CardTitle className="mb-4">Fisheye 📸</CardTitle>
+              <CardTitle className="mb-4">Nextfilm 🎞️</CardTitle>
               <div className="overflow-hidden rounded-md border-2 border-primary">
-                <Link href="https://fisheye.julienpenna.com" target="_blank">
+                <Link href="https://nextfilm.julienpenna.com" target="_blank">
                   <Image
-                    alt="Fisheye, le site internet"
+                    alt="Nextfilm, le site internet"
                     loading="lazy"
                     width="600"
                     height="400"
                     decoding="async"
                     className="h-auto transition-all scale-101 rounded-none hover:scale-110"
-                    src="/fisheye.gif"
+                    src="/nextfilm.gif"
                     unoptimized
                   />
                 </Link>
@@ -88,21 +88,23 @@ export const Projects = () => {
             </CardHeader>
             <CardContent>
               <p>
-                <span className="text-primary font-bold">Fisheye</span> est un
-                site web qui permet aux photographes indépendants de présenter
-                leurs meilleurs travaux via un portfolio.
+                <span className="text-primary font-bold">Nextfilm</span> est un
+                site web qui répertorie des films et des séries aimées par
+                Julien Penna.
               </p>
               <p>
-                <span className="font-bold">Missions :</span> Créer un site
-                accessible pour une plateforme de photographes en Javascript.
+                <span className="font-bold">Stack :</span> Ce site a été créé
+                avec Next.js et en TypeScript, associés à Tailwind CSS et shadcn
+                pour le design.
               </p>
               <p>
-                Récupérer et afficher des données JSON, créer une modale de
-                contact, une LightBox pour les médias et gérer les likes.
+                Récupérer et afficher des données, Tri par Séries ou Films,
+                Script JS, Lazy loading pour afficher les cards au fil du
+                scroll.
               </p>
             </CardContent>
             <CardFooter className="flex justify-end">
-              <Link href="https://fisheye.julienpenna.com" target="_blank">
+              <Link href="https://nextifilm.julienpenna.com" target="_blank">
                 <Button className="ml-auto group hover:bg-gray-900 see-more">
                   Voir le site{" "}
                   <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />

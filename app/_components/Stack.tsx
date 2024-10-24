@@ -72,7 +72,7 @@ const stackItems: StackItem[] = [
 const Stack: React.FC = () => {
   return (
     <section className="scroller max-w-5xl mx-auto">
-      <div className="track">
+      <div className="track my-1">
         {stackItems.map((item, index) => (
           <div key={index} className="item">
             <Image

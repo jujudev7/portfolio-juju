@@ -65,6 +65,7 @@ export const Hero = () => {
                   height={240}
                   alt="portrait Julien Penna"
                   className="photo-juju"
+                  priority
                 />
               </div>
             </div>

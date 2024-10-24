@@ -116,13 +116,15 @@ export const Contact = () => {
             <div className="flex flex-col md:flex-row md:space-x-4 w-full">
               <FormField
                 control={form.control}
-                id="name"
                 name="name"
                 render={({ field }) => (
                   <FormItem className="flex-grow">
-                    <FormLabel className="text-lg text-white">Nom</FormLabel>
+                    <FormLabel htmlFor="name" className="text-lg text-white">
+                      Nom
+                    </FormLabel>
                     <FormControl>
                       <Input
+                        id="name"
                         className="bg-white"
                         placeholder="Martin Dupont"
                         {...field}
@@ -135,13 +137,15 @@ export const Contact = () => {
             </div>
             <FormField
               control={form.control}
-              id="email"
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-lg text-white">Email</FormLabel>
+                  <FormLabel htmlFor="email" className="text-lg text-white">
+                    Email
+                  </FormLabel>
                   <FormControl>
                     <Input
+                      id="email"
                       className="bg-white"
                       placeholder="blabla.blabla@blabla.com"
                       {...field}
@@ -154,13 +158,15 @@ export const Contact = () => {
 
             <FormField
               control={form.control}
-              id="subject"
               name="subject"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-lg text-white">Sujet</FormLabel>
+                  <FormLabel htmlFor="subject" className="text-lg text-white">
+                    Sujet
+                  </FormLabel>
                   <FormControl>
                     <Input
+                      id="subject"
                       className="bg-white"
                       placeholder="Sujet..."
                       {...field}
@@ -173,13 +179,15 @@ export const Contact = () => {
 
             <FormField
               control={form.control}
-              id="message"
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-lg text-white">Message</FormLabel>
+                  <FormLabel htmlFor="message" className="text-lg text-white">
+                    Message
+                  </FormLabel>
                   <FormControl>
                     <Textarea
+                      id="message"
                       className="min-h-[140px] bg-white"
                       placeholder="Mon message..."
                       {...field}

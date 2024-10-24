@@ -43,40 +43,48 @@ export const Header = () => {
           />
         </Link>
         <ul className="menu flex space-x-8">
-          <Link
-            className="about-link menu-link"
-            href="#about"
-            onClick={handleScroll}
-          >
-            À propos
-          </Link>
-          <Link
-            className="projects-link menu-link"
-            href="#projects"
-            onClick={handleScroll}
-          >
-            <span className="text">Projets</span>
-            <span className="marquee">Projets</span>
-          </Link>
-          <Link
-            className="menu-link certifs-link certifs-link--gooey"
-            href="#certifications"
-            onClick={handleScroll}
-          >
-            Certifs
-            <div className="certifs-link__blobs">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          </Link>
-          <Link
-            className="contact-link menu-link"
-            href="#contact"
-            onClick={handleScroll}
-          >
-            Contact
-          </Link>
+          <li>
+            <Link
+              className="about-link menu-link"
+              href="#about"
+              onClick={handleScroll}
+            >
+              À propos
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="projects-link menu-link"
+              href="#projects"
+              onClick={handleScroll}
+            >
+              <span className="text">Projets</span>
+              <span className="marquee">Projets</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="menu-link certifs-link certifs-link--gooey"
+              href="#certifications"
+              onClick={handleScroll}
+            >
+              Certifs
+              <div className="certifs-link__blobs">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="contact-link menu-link"
+              href="#contact"
+              onClick={handleScroll}
+            >
+              Contact
+            </Link>
+          </li>
         </ul>
         {/* <SwitchLanguage /> */}
         <ModeToggle />

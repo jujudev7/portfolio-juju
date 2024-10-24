@@ -116,6 +116,7 @@ export const Contact = () => {
             <div className="flex flex-col md:flex-row md:space-x-4 w-full">
               <FormField
                 control={form.control}
+                id="name"
                 name="name"
                 render={({ field }) => (
                   <FormItem className="flex-grow">
@@ -134,6 +135,7 @@ export const Contact = () => {
             </div>
             <FormField
               control={form.control}
+              id="email"
               name="email"
               render={({ field }) => (
                 <FormItem>
@@ -152,6 +154,7 @@ export const Contact = () => {
 
             <FormField
               control={form.control}
+              id="subject"
               name="subject"
               render={({ field }) => (
                 <FormItem>
@@ -170,6 +173,7 @@ export const Contact = () => {
 
             <FormField
               control={form.control}
+              id="message"
               name="message"
               render={({ field }) => (
                 <FormItem>

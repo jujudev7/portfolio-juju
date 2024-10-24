@@ -104,7 +104,7 @@ export const Projects = () => {
               </p>
             </CardContent>
             <CardFooter className="flex justify-end">
-              <Link href="https://nextifilm.julienpenna.com" target="_blank">
+              <Link href="https://nextfilm.julienpenna.com" target="_blank">
                 <Button className="ml-auto group hover:bg-gray-900 see-more">
                   Voir le site{" "}
                   <ArrowTopRightIcon className="pl-1 h-5 w-5 group-hover:translate-x-2 transition duration-150 ease-in-out" />

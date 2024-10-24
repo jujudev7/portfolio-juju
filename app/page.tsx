@@ -11,7 +11,7 @@ import Stack from "./_components/Stack";
 
 export default function Home() {
   return (
-    <body>
+    <div>
       <Header />
       <Hero />
       <Stack />
@@ -25,6 +25,6 @@ export default function Home() {
           Penna
         </span>
       </div>
-    </body>
+    </div>
   );
 }

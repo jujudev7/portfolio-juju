@@ -93,9 +93,9 @@ export const Projects = () => {
                 Julien Penna.
               </p>
               <p>
-                <span className="font-bold">Stack :</span> Ce site a été créé
-                avec Next.js et en TypeScript, associés à Tailwind CSS et shadcn
-                pour le design.
+                <span className="font-bold green">Stack :</span> Ce site a été
+                créé avec Next.js et en TypeScript, associés à Tailwind CSS et
+                shadcn pour le design.
               </p>
               <p>
                 Récupérer et afficher des données, Tri par Séries ou Films,
@@ -137,8 +137,9 @@ export const Projects = () => {
                 leurs meilleurs travaux via un portfolio.
               </p>
               <p>
-                <strong className="strong">Missions :</strong> Créer un site
-                accessible pour une plateforme de photographes en Javascript.
+                <span className="font-bold green">Missions :</span> Créer un
+                site accessible pour une plateforme de photographes en
+                Javascript.
               </p>
               <p>
                 Récupérer et afficher des données JSON, créer une modale de
@@ -180,8 +181,8 @@ export const Projects = () => {
                 jeux vidéo.
               </p>
               <p>
-                <span className="font-bold">Missions :</span> Créer une landing
-                page avec Javascript.
+                <span className="font-bold green">Missions :</span> Créer une
+                landing page avec Javascript.
               </p>
               <p>
                 Réaliser un formulaire et gérer la validation des inputs pour
@@ -224,8 +225,8 @@ export const Projects = () => {
                 la restauration et la commande de repas en ligne.
               </p>
               <p>
-                <span className="font-bold">Missions : </span>Dynamiser des
-                pages web avec des animations CSS, utilisation de Sass.
+                <span className="font-bold green">Missions : </span>Dynamiser
+                des pages web avec des animations CSS, utilisation de Sass.
               </p>
               <p>
                 Développer un site “mobile first” qui répertorie les menus de
@@ -268,8 +269,8 @@ export const Projects = () => {
                 activités dans la ville de leur choix.
               </p>
               <p>
-                <span className="font-bold">Missions : </span>Transformer une
-                maquette Figma en site web avec HTML & CSS.
+                <span className="font-bold green">Missions : </span>Transformer
+                une maquette Figma en site web avec HTML & CSS.
               </p>
               <p>Développer une interface responsive.</p>
             </CardContent>

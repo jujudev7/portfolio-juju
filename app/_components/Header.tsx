@@ -42,7 +42,7 @@ export const Header = () => {
             className="logo ml-4 w-10 mt-2"
           />
         </Link>
-        <ul className="menu flex space-x-8">
+        <ul className="menu flex gap-8">
           <li>
             <Link
               className="about-link menu-link"
